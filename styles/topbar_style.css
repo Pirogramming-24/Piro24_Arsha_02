@@ -1,0 +1,129 @@
+#topbar {
+    background-color: #181e4b; /* 헤더보다 더 진한 남색 */
+    height: 40px;              /* 얇은 높이 */
+    width: 100%;
+    position: fixed;           /* 화면 고정 */
+    top: 0;
+    left: 0;
+    z-index: 1000;             /* 헤더(999)보다 더 위에 오도록 설정 */
+    
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    align-items: center;
+    padding: 0 15px;
+    font-family: sans-serif;
+    color: #fff;
+    border-bottom: 1px solid #2a305e;
+}
+
+/* --- 왼쪽 영역 --- */
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bm-logo {
+    display: flex;       /* 이미지를 수직 중앙에 놓기 위해 */
+    align-items: center;
+    text-decoration: none;
+    margin-right: 15px;  /* 옆에 있는 디바이스 아이콘과 간격 띄우기 */
+}
+
+/* ★ 핵심: 이미지 크기 조절 ★ */
+.bm-logo img {
+    height: 20px;       /* Top Bar가 40px이므로 절반 정도 크기로 설정 */
+    width: auto;        /* 비율 유지 */
+    display: block;     /* 불필요한 여백 제거 */
+}
+
+.bm-logo .highlight {
+    color: #47b2e4; /* 포인트 색상 */
+}
+
+/* 디바이스 아이콘 (CSS로 사각형 그리기) */
+.device-icons {
+    display: flex;
+    align-items: flex-end; /* 바닥 기준 정렬 */
+    gap: 8px;
+    opacity: 0.6; /* 약간 흐리게 */
+}
+
+/* 데스크탑 모양 */
+.icon-desktop {
+    width: 14px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 1px;
+}
+/* 태블릿 모양 */
+.icon-tablet {
+    width: 10px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 1px;
+}
+/* 모바일 모양 */
+.icon-mobile {
+    width: 7px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 1px;
+}
+
+/* --- 중앙 영역 --- */
+.topbar-center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-name {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.nav-arrow {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-arrow:hover {
+    color: #fff;
+}
+
+/* --- 오른쪽 영역 --- */
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.share-icon {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn-download {
+    background-color: #0d6efd; /* 밝은 파란색 버튼 */
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #0b5ed7;
+}
+
+.icon-down {
+    font-size: 10px;
+}

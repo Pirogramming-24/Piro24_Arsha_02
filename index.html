@@ -3,26 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arsha Clone</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/topbar_style.css">
+    <link rel="stylesheet" href="styles/header_style.css">
+    <link rel="stylesheet" href="styles/home_style.css">
 </head>
 <body>
-    <header></header> <!--제일 위에 고정되어 있는 메뉴바-->
-    <!--반응형으로 화면 줄이면 바에 햄버거 나와야 함 -->
-`
-    <div class="Home"></div>
-    <div class="About"></div>
-    <div class="Services"></div>
-    <div class="Portfolio"></div>
-    <div class="Team"></div>
-    <div class="Pricing"></div>
-    <div class="Blog"></div>
-    <div class="Dropdown"></div>
-    <div class="Contact"></div>
+    <div id="topbar">
+        <div class="topbar-left">
+            <!-- <a href="#" class="bm-logo">BOOTSTRAP<span class="highlight">MADE</span></a> -->
+             <a href="#" class="bm-logo">
+                <img src="https://bootstrapmade.com/assets/img/logo.png" alt="BootstrapMade Logo">
+            </a>
+            <div class="device-icons">
+                <span class="icon-desktop"></span>
+                <span class="icon-tablet"></span>
+                <span class="icon-mobile"></span>
+            </div>
+        </div>
 
+        <div class="topbar-center">
+            <a href="#" class="nav-arrow">❮</a>
+            <span class="theme-name">Arsha</span>
+            <a href="#" class="nav-arrow">❯</a>
+        </div>
 
-    <footer></footer>
+        <div class="topbar-right">
+            <a href="#" class="share-icon">⎋</a> <a href="#" class="btn-download">
+                <span class="icon-down">⬇</span> DOWNLOAD
+            </a>
+        </div>
+    </div>
+    <header id="header" class="fixed-header">
+        <div class="container"> <h1 class="logo">
+                <a href="#home">ARSHA</a>
+            </h1>
 
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
 
+                    <li class="dropdown">
+                        <a href="#">Dropdown <span class="arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="deep-dropdown">
+                                <a href="#">Deep Drop Down <span class="arrow">▶</span></a>
+                                <ul class="deep-dropdown-menu">
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+
+                    <li><a href="#about" class="btn-get-started">Get Started</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="container">
+            
+            <div class="row">
+                <div class="home-content">
+                    <h1>Better Solutions For Your Business</h1>
+                    <h2>We are team of talented designers making websites with Bootstrap</h2>
+                    
+                    <div class="home-btns">
+                        <a href="#about" class="btn-get-started">Get Started</a>
+                        
+                        <a href="#" class="btn-watch-video">
+                            <span class="video-icon">▶</span> Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home-img-container">
+                    <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/hero-img.png" 
+                         alt="Hero Image" class="img-fluid animated">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        </section>
+
+    <section id="services" class="services-section">
+        </section>
+
+    <section id="portfolio" class="portfolio-section">
+        </section>
+
+    <section id="team" class="team-section">
+        </section>
+
+    <section id="pricing" class="pricing-section">
+        </section>
+
+    <section id="blog" class="blog-section">
+        </section>
+
+    <section id="contact" class="contact-section">
+        </section>
+
+    <footer id="footer" class="footer-section">
+        </footer>
 
 </body>
-</html>`
+</html>

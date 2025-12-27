@@ -1,0 +1,117 @@
+/* =======================================================
+   Home Section Style
+   ======================================================= */
+
+#home {
+    width: 100%;
+    height: 100vh;           /* 화면 전체 높이 사용 */
+    background-color: #37517e; /* 메인 배경색 (남색) */
+    display: flex;
+    align-items: center;     /* 수직 중앙 정렬 */
+    
+    /* 중요: 헤더(72px) + 탑바(40px) 높이만큼 위를 비워줘야 함 */
+    padding-top: 112px; 
+}
+
+/* 내부 레이아웃 (좌우 정렬) */
+#home .row {
+    display: flex;
+    align-items: center;     /* 텍스트와 이미지 수직 높이 맞춤 */
+    justify-content: space-between; /* 양 끝으로 배치 */
+}
+
+/* --- 1. 왼쪽: 텍스트 영역 --- */
+.home-content {
+    width: 50%; /* 화면 절반 차지 */
+}
+
+.home-content h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+    font-family: "Jost", sans-serif; /* Arsha 타이틀 폰트 */
+}
+
+.home-content h2 {
+    color: rgba(255, 255, 255, 0.6); /* 약간 흐린 흰색 */
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* 버튼들을 감싸는 박스 */
+.home-btns {
+    display: flex;
+    gap: 20px; /* 버튼 사이 간격 */
+    align-items: center;
+}
+
+/* [Get Started] 버튼 스타일 */
+.home-btns .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;      /* 헤더 버튼보다 조금 더 큼 */
+    border-radius: 50px;
+    transition: 0.5s;
+    background-color: #47b2e4; /* 포인트 색상 (하늘색) */
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-btns .btn-get-started:hover {
+    background-color: #209dd8; /* 호버 시 조금 더 진하게 */
+}
+
+/* [Watch Video] 버튼 스타일 */
+.home-btns .btn-watch-video {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* 비디오 재생 아이콘 (원형 아웃라인 없음, 심플하게) */
+.home-btns .btn-watch-video .video-icon {
+    font-size: 32px;
+    margin-right: 8px;
+    line-height: 0;
+}
+
+.home-btns .btn-watch-video:hover {
+    color: #47b2e4; /* 글자색 하늘색으로 변경 */
+}
+
+/* --- 2. 오른쪽: 이미지 영역 --- */
+.home-img-container {
+    width: 45%; /* 나머지 공간 */
+    text-align: right; /* 이미지를 오른쪽 끝으로 */
+}
+
+.home-img-container img {
+    width: 100%;      /* 부모 크기에 맞춤 */
+    max-width: 100%;  /* 삐져나감 방지 */
+}
+
+/* --- ★ 핵심: 둥둥 떠다니는 애니메이션 ★ --- */
+.animated {
+    /* up-down이라는 애니메이션을 2초 동안, 부드럽게(ease-in-out), 무한반복(infinite), 왕복(alternate) */
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+/* 애니메이션 동작 정의 (Keyframes) */
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px); /* 위로 20px 이동 */
+    }
+}
