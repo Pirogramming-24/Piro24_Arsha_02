@@ -1,0 +1,351 @@
+.Portfolio *{
+    align-content: center;
+    justify-content: center;
+}
+.portfolio-section .portfolioTitle_hs{
+    background-color: blueviolet;
+    justify-content: center;
+    text-align: center;
+}
+.portfolio-section .portfolioTitle_hs h2{
+
+    margin-bottom: 5px;
+    padding: 3px;
+}
+.portfolio-section .portfolioTitle_hs hr{
+    width: 130px;
+    height: 1px;
+    border: 0;
+    background-color: gray;
+}
+.portfolio-section .portfolioTitle_hs p{}
+.portfolioBody_hs{
+    background-color: aqua;
+    position: relative;
+    display: flex;
+    align-content: center;
+    
+    padding: 30px;
+}
+.portfolio-section .portfolioBody_hs .layout_hs{
+    background-color: yellow;
+
+    width: 100%;           /* 화면 크기에 따라 자동 */
+    max-width: 1200px;     /* 너무 커지지 않게 */
+    margin: 0 auto;        /* 가운데 정렬 */
+    padding: 0 24px;       /* 양쪽 여백 */
+    box-sizing: border-box;
+}
+.portfolioBody_hs input[type="radio"] {
+    display: none;
+}
+
+
+.portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs{
+    background-color: antiquewhite;
+    justify-content: center; display: flex;
+
+    flex-direction: row; list-style: none;
+}
+
+.portfolio-filters_hs label {
+    display: block;
+    padding: 7px 21px;
+    margin: 10px;
+    background-color: pink;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs li{
+    padding: 10px 20px; margin: -3px;
+
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs label:hover{
+    background-color: skyblue;
+    color: white;
+}
+
+
+/* ⭐ 클릭 고정 상태 */
+#filter-all:checked  ~ .portfolio-filters_hs label[for="filter-all"],
+#filter-app:checked  ~ .portfolio-filters_hs label[for="filter-app"],
+#filter-card:checked ~ .portfolio-filters_hs label[for="filter-card"],
+#filter-web:checked  ~ .portfolio-filters_hs label[for="filter-web"] {
+    background-color: skyblue;
+    color: white;
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs {
+    position: relative;   /* ⭐ 기준점 */
+    width: 100%;
+    height: 800px;        /* 작업하기 편하게 임시로 크게 */
+    background-color: lightgray;
+
+    justify-content: center;
+    /*
+    transition: 
+        top 0.6s ease,
+        left 0.6s ease,
+        opacity 0.4s ease;
+    */
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .imgCard {
+    position: absolute;   /* ⭐ 직접 좌표 지정 가능 */
+    width: 300px;         /* 카드 크기 */
+    margin: 0;
+    overflow: hidden;
+
+    /*카드 위치 이동*/
+    transition:
+        top 0.5s ease,
+        left 0.5s ease,
+        opacity 0.3s ease;
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .imgCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.portfolio-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 300px;
+    height: 100px;
+
+    background-color: rgba(255, 255, 255, 0.88);
+    opacity: 1;
+
+    transform: translateY(100%);  /* ⭐ 자기 높이만큼 정확히 아래 */
+    transition: transform 0.4s ease;
+
+    padding: 12px 12px;
+    box-sizing: border-box;
+}
+
+
+/* .movingImg_hs .imgCard:hover .portfolio-info {
+    transform: translateY(0);
+} */
+
+
+
+/*카드의 기본 상태 정의*/
+.card-cactus { top: 0; left: 0; }
+.card-ampoule { top: 0; left: 330px; }
+.card-paint { top: 0; left: 660px; }
+.card-writing { top: 220px; left: 330px; }
+.card-flower-brush { top: 230px; left: 660px; }
+.card-highlight-pens { top: 400px; left: 0px; }
+.card-coloring-pencils{top: 600px; left: 660px;}
+.card-glasses-book{top: 600px; left: 330px;}
+
+
+
+#filter-all:checked ~ .movingImg_hs .card-cactus { top: 0px; left: 0px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-ampoule { top: 0px; left: 330px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-paint { top: 0px; left: 660px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-writing{ top: 220px; left: 330px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-flower-brush{ top:230px; left: 660px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-highlight-pens{ top: 400px; left: 0px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-string{top: 400px; left: 330px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-coloring-pencils{top: 600px; left: 660px; opacity: 1;}
+#filter-all:checked ~ .movingImg_hs .card-glasses-book{top: 600px; left: 330px; opacity: 1;}
+
+/*App 메뉴 클릭 시*/
+#filter-app:checked ~ .movingImg_hs .card-cactus {top: 0; left: 0; opacity: 1;}
+#filter-app:checked ~ .movingImg_hs .card-writing {top: 0; left: 330px; opacity: 1;}
+#filter-app:checked ~ .movingImg_hs .card-string {top: 0; left: 660px; opacity: 1;}
+#filter-app:checked ~ .movingImg_hs 
+.imgCard:not(.card-cactus):not(.card-writing):not(.card-string) {
+  top: 1000px;      /* 화면 아래로 */
+  opacity: 0;
+}
+
+/*Card 메뉴 클릭 시*/
+#filter-card:checked ~ .movingImg_hs .card-ampoule {top: 0; left: 0; opacity: 1;}
+#filter-card:checked ~ .movingImg_hs .card-flower-brush {top: 0; left: 330px; opacity: 1;}
+#filter-card:checked ~ .movingImg_hs .card-coloring-pencils {top: 0; left: 660px; opacity: 1;}
+#filter-card:checked ~ .movingImg_hs 
+.imgCard:not(.card-ampoule):not(.card-flower-brush):not(.card-coloring-pencils) {
+  top: 1000px;      /* 화면 아래로 */
+  opacity: 0;
+}
+
+/*Web 메뉴 클릭 시*/
+#filter-web:checked ~ .movingImg_hs .card-paint {top: 0; left: 0; opacity: 1;}
+#filter-web:checked ~ .movingImg_hs .card-highlight-pens {top: 0; left: 330px; opacity: 1;}
+#filter-web:checked ~ .movingImg_hs .card-glasses-book {top: 0; left: 660px; opacity: 1;}
+#filter-web:checked ~ .movingImg_hs 
+.imgCard:not(.card-paint):not(.card-highlight-pens):not(.card-glasses-book) {
+  top: 1000px;      /* 화면 아래로 */
+  opacity: 0;
+}
+
+
+
+
+
+
+.imgCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-cactus:hover .portfolio-info {
+    opacity: 0.88; transform: translateY(0);
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-ampoule:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-paint:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-writing:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-flower-brush:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-highlight-pens:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-string:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-coloring-pencils:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-glasses-book:hover .portfolio-info {
+    opacity: 0.7; transform: translateY(0);
+}
+
+
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus img{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info text{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info text h4{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info text p{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info .button{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info .button .readingGlasses{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .cactus .portfolio-info .button .chain{}
+
+.portfolioBody_hs .layout_hs .movingImg_hs .ampoule{}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .ampoule{}
+
+@media (max-width: 991px){
+
+  #filter-all:checked ~ .movingImg_hs .card-cactus {top: 0px; left: 0px; opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-ampoule {top: 0px; left: 360px;opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-paint {top: 248.109px; left: 360px; opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-writing {top: 471.891px;left: 0px;opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-flower-brush {top: 496.218px;left: 360px;opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-highlight-pens {top: 720px;left: 0px;opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-string {top: 968.109px;left: 360px;opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-coloring-pencils {top: 1191.89px;left: 0px;opacity: 1;}
+
+  #filter-all:checked ~ .movingImg_hs .card-glasses-book {top: 1216.22px;left: 360px;opacity: 1;}
+}
+
+/*2열*/
+@media (max-width: 991px) {
+  #filter-app:checked ~ .movingImg_hs .card-cactus {top: 0; left: 0;}
+  #filter-app:checked ~ .movingImg_hs .card-writing {top: 0; left: 330px;}
+  #filter-app:checked ~ .movingImg_hs .card-string {top: 430px; left: 330px;}
+}
+/*
+
+#filter-app:checked ~ .movingImg_hs .card-cactus {top: 0; left: 0; opacity: 1;}
+#filter-app:checked ~ .movingImg_hs .card-writing {top: 0; left: 330px; opacity: 1;}
+#filter-app:checked ~ .movingImg_hs .card-string {top: 0; left: 660px; opacity: 1;}
+#filter-app:checked ~ .movingImg_hs 
+*/
+
+
+@media (max-width: 919px) {
+  #filter-card:checked ~ .movingImg_hs .card-ampoule {top: 0; left: 0;}
+  #filter-card:checked ~ .movingImg_hs .card-flower-brush {top: 0; left: 330px;}
+  #filter-card:checked ~ .movingImg_hs .card-coloring-pencils {top: 100px; left: 0px;}
+}
+
+/*
+#filter-card:checked ~ .movingImg_hs .card-ampoule {top: 0; left: 0; opacity: 1;}
+#filter-card:checked ~ .movingImg_hs .card-flower-brush {top: 0; left: 330px; opacity: 1;}
+#filter-card:checked ~ .movingImg_hs .card-coloring-pencils {top: 0; left: 660px; opacity: 1;}
+#filter-card:checked ~ .movingImg_hs 
+*/
+
+@media (max-width: 919px) {
+  #filter-web:checked ~ .movingImg_hs .card-paint {top: 0; left: 0;}
+  #filter-web:checked ~ .movingImg_hs .card-highlight-pens {top: 0; left: 330px;}
+  #filter-web:checked ~ .movingImg_hs .card-glasses-book {top: 250px; left: 0px;}
+}
+
+/*1열*/
+@media (max-width: 767px) {
+
+  .movingImg_hs {height: 2600px;}  /* 카드 개수 × 간격 */
+
+  .movingImg_hs .imgCard { width: 100%;left: 0 !important;}
+
+  /* ===== ALL ===== */
+  #filter-all:checked ~ .movingImg_hs .card-cactus {top: 0px;}
+  #filter-all:checked ~ .movingImg_hs .card-ampoule {top: 280px;}
+  #filter-all:checked ~ .movingImg_hs .card-paint {top: 560px;}
+  #filter-all:checked ~ .movingImg_hs .card-writing {top: 840px;}
+  #filter-all:checked ~ .movingImg_hs .card-flower-brush {top: 1120px;}
+  #filter-all:checked ~ .movingImg_hs .card-highlight-pens {top: 1400px;}
+  #filter-all:checked ~ .movingImg_hs .card-string {top: 1680px;}
+  #filter-all:checked ~ .movingImg_hs .card-coloring-pencils {top: 1960px;}
+  #filter-all:checked ~ .movingImg_hs .card-glasses-book {top: 2240px;}
+}
+
+@media (max-width: 767px) {
+  #filter-app:checked ~ .movingImg_hs .card-cactus {top: 0px;}
+  #filter-app:checked ~ .movingImg_hs .card-writing {top: 280px;}
+  #filter-app:checked ~ .movingImg_hs .card-string {top: 560px;}
+}
+
+@media (max-width: 767px) {
+  #filter-card:checked ~ .movingImg_hs .card-ampoule {top: 0px;}
+  #filter-card:checked ~ .movingImg_hs .card-flower-brush {top: 280px;}
+  #filter-card:checked ~ .movingImg_hs .card-coloring-pencils {top: 560px;}
+}
+
+@media (max-width: 767px) {
+  #filter-web:checked ~ .movingImg_hs .card-paint {top: 0px;}
+  #filter-web:checked ~ .movingImg_hs .card-highlight-pens {top: 280px;}
+  #filter-web:checked ~ .movingImg_hs .card-glasses-book {top: 560px;}
+}
+/*
+app=> 
+card=>ampoule, brush, pencils
+web=>paint, pens, book
+*/
+
+
+@media (max-width: 991px) {
+  .imgCard {
+    width: 45%;
+  }
+}
+
+
