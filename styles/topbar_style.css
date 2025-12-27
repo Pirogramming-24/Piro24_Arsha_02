@@ -1,7 +1,3 @@
-/* =======================================================
-   Top Bar Style (Bootstrap Icons Ver.) - NY Version
-   ======================================================= */
-
 #topbar_ny {
     background-color: #023B6D; 
     height: 35px;              
@@ -40,30 +36,24 @@
     display: block;     
 }
 
-/* [수정됨] 디바이스 아이콘 영역 */
 .device-icons_ny {
     display: flex;
-    align-items: center; /* 아이콘 수직 중앙 정렬 */
-    gap: 15px;           /* 아이콘 사이 간격 */
-    color: #fff;         /* 기본 흰색 */
-    opacity: 0.6;        /* 약간 흐리게 (원본 느낌) */
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    opacity: 0.6;
 }
 
-/* [수정됨] 아이콘 개별 스타일 (Bootstrap Icons) */
 .device-icons_ny i {
-    font-size: 16px;     /* 아이콘 크기 설정 */
-    cursor: pointer;     /* 마우스 올리면 손가락 모양 */
+    font-size: 16px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-/* 마우스 올리면 진하게 & 파란색 효과 */
 .device-icons_ny i:hover {
     opacity: 1;
     color: #47b2e4;
 }
-
-/* --- (기존의 .icon-desktop_ny, .icon-tablet_ny 등 도형 그리는 코드는 삭제됨) --- */
-
 
 /* --- 중앙 영역 --- */
 .topbar-center_ny {
@@ -105,11 +95,10 @@
     background-color: #00A6EB; 
     color: #fff;
     text-decoration: none;
-    height: 100%;        /* 부모 높이(40px)를 꽉 채움 */
+    height: 100%;
     padding: 0 25px;
     font-size: 13px;
     font-weight: 800;
-    /* border-radius: 4px; */
     display: flex;
     align-items: center;
     gap: 5px;
