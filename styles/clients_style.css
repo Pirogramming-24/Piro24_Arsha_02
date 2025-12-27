@@ -68,13 +68,35 @@
     }
 }
 
-/* --- 반응형 (모바일 대응) --- */
-@media (max-width: 992px) {
-    /* 태블릿: 4개 보이기 -> 분모를 4로 변경 */
-    .slider-track_ny { width: calc((100% / 4) * 16); }
+/* 1. 기본 (1200px 이상): 6개 보이기 */
+.slider-track_ny {
+    width: calc((100% / 6) * 16);
 }
 
-@media (max-width: 576px) {
-    /* 모바일: 2개 보이기 -> 분모를 2로 변경 */
-    .slider-track_ny { width: calc((100% / 2) * 16); }
+/* 2. 992px ~ 1200px: 5개 보이기 */
+@media (max-width: 1200px) {
+    .slider-track_ny {
+        width: calc((100% / 5) * 16);
+    }
+}
+
+/* 3. 640px ~ 992px: 4개 보이기 */
+@media (max-width: 992px) {
+    .slider-track_ny {
+        width: calc((100% / 4) * 16);
+    }
+}
+
+/* 4. 480px ~ 640px: 3개 보이기 */
+@media (max-width: 640px) {
+    .slider-track_ny {
+        width: calc((100% / 3) * 16);
+    }
+}
+
+/* 5. 320px ~ 480px: 2개 보이기 (모바일) */
+@media (max-width: 480px) {
+    .slider-track_ny {
+        width: calc((100% / 2) * 16);
+    }
 }

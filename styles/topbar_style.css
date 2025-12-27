@@ -123,3 +123,20 @@
 .icon-down_ny {
     font-size: 15px;
 }
+
+/* 1. 화면 너비 1024px 이하 */
+@media (max-width: 1024px) {
+    .device-icons_ny {
+        display: none;
+    }
+}
+
+/* 2. 화면 너비 768px 이하 */
+@media (max-width: 768px) {
+    .bm-logo_ny {
+        display: none;
+    }
+    .topbar-left_ny {
+        display: none;
+    }
+}

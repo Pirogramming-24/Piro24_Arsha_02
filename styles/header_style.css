@@ -155,3 +155,65 @@
     background-color: #209dd8;
     color: #fff;
 }
+
+/* 1. 기본 상태 (데스크탑, 1200px 초과): 햄버거 버튼 숨김 */
+.d-xl-none_ny {
+    display: none; 
+}
+
+/* 2. 화면 너비 1200px 이하일 때 적용 (모바일/태블릿) */
+@media (max-width: 1200px) {
+    .navbar_ny {
+        margin-left: auto; 
+    }
+
+    /* --- 1. 햄버거 버튼 스타일 (CSS로 그리기) --- */
+    .mobile-nav-toggle_ny {
+        display: block;        
+        width: 22px;           /* 버튼 너비 */
+        height: 22px;          /* 버튼 높이 */
+        cursor: pointer;
+        margin-left: 15px;
+        
+        /* 아이콘 중앙 정렬을 위한 설정 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-nav-toggle_ny.bi-list::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        box-shadow: 
+            0 -8px 0 0 #fff,
+            0  8px 0 0 #fff;
+    }
+
+    /* --- 2. 메뉴 숨김 및 버튼 배치 로직 --- */
+    
+    /* 네비게이션바 정렬 (버튼과 햄버거 가로 배치) */
+    .navbar_ny ul {
+        display: flex;
+        align-items: center; 
+        margin: 0; padding: 0;
+    }
+
+    /* 모든 메뉴(li) 숨김 */
+    .navbar_ny ul li {
+        display: none; 
+    }
+
+    /* 마지막 아이템(Get Started 버튼)만 다시 보이게 */
+    .navbar_ny ul li:last-child {
+        display: block;
+    }
+
+    /* Get Started 버튼 스타일 */
+    .btn-get-started_ny {
+        margin-left: 0; 
+        padding: 8px 20px;
+        white-space: nowrap;
+    }
+}

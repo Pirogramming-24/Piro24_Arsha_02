@@ -261,3 +261,57 @@
     background: #47b2e4;
     color: #fff;
 }
+
+/* 1. 태블릿 (992px 이하) */
+@media (max-width: 992px) {
+    .footer-top_ny {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .footer-top_ny .row_ny {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px 0;
+    }
+
+    .footer-contact_ny, 
+    .footer-links_ny {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        box-sizing: border-box;
+        padding-right: 15px;
+    }
+
+    .footer-social_ny {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        padding-right: 0;
+    }
+}
+
+/* 2. 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .footer-top_ny {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-top_ny .row_ny {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-contact_ny, 
+    .footer-links_ny, 
+    .footer-social_ny {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    
+    .footer-social_ny {
+        margin-top: 0;
+    }
+}
