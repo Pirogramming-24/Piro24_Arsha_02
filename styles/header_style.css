@@ -1,149 +1,157 @@
 /* 헤더 전체 틀 (상단 고정) */
-#header {
-    background-color: #37517e; /* Arsha 메인 남색 */
-    height: 72px;              /* 헤더 높이 */
-    width: 100%;               /* 가로 꽉 차게 */
-    position: fixed;           /* 스크롤해도 상단에 붙어있음 */
-    top: 40px;
+#header_ny {
+    background-color: #37517e;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 35px; /* Topbar 높이만큼 띄움 */
     left: 0;
-    z-index: 999;              /* 다른 요소들보다 위에 뜨게 */
-    transition: all 0.5s;      /* 부드러운 전환 효과 */
+    z-index: 999;
+    transition: all 0.5s;
 }
 
 /* 헤더 내부 컨테이너 (로고와 메뉴바 정렬) */
-#header .container {
-    width: 90%;                 /* 양옆 여백 확보 */
-    max-width: 1200px;          /* 너무 넓어지지 않게 제한 */
-    height: 100%;               /* 헤더 높이만큼 씀 */
-    margin: 0 auto;             /* 중앙 정렬 */
-    display: flex;              /* 로고와 메뉴 가로 배치 */
-    align-items: center;        /* 수직 중앙 정렬 */
-    justify-content: space-between; /* 로고는 왼쪽 끝, 메뉴는 오른쪽 끝 */
+#header_ny .container_ny {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* --- 1. 로고 스타일 --- */
-.logo a {
+.logo_ny a {
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 2px;       /* 자간 넓게 */
+    letter-spacing: 2px;
     color: #fff;
-    text-transform: uppercase; /* 대문자로 변환 */
+    text-transform: uppercase;
     text-decoration: none;
 }
 
 /* --- 2. 네비게이션바 스타일 --- */
 
 /* ul (메뉴 리스트) 가로 정렬 */
-.navbar ul {
-    display: flex;             /* 가로 나열 */
-    gap: 30px;                 /* 메뉴 사이 간격 */
-    list-style: none;          /* 점(bullet) 제거 */
+.navbar_ny ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    align-items: center;       /* 버튼 포함 수직 정렬 */
+    align-items: center;
 }
 
 /* 메뉴 링크 텍스트 */
-.navbar a {
-    font-family: "Open Sans", sans-serif; /* 폰트 설정 (없으면 기본폰트) */
+.navbar_ny a {
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 500;
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
-    display: flex;             /* 아이콘 정렬용 */
+    display: flex;
     align-items: center;
 }
 
 /* 마우스 올렸을 때 & 활성화된 메뉴 색상 */
-.navbar a:hover, 
-.navbar .active {
-    color: #47b2e4;            /* Arsha 포인트 하늘색 */
+.navbar_ny a:hover, 
+.navbar_ny .active_ny {
+    color: #47b2e4;
 }
 
-/* --- 3. 드롭다운 메뉴 스타일 (순수 CSS) --- */
-.dropdown {
-    position: relative; /* 자식인 dropdown-menu의 기준점 */
+/* --- 3. 드롭다운 메뉴 스타일 --- */
+.dropdown_ny {
+    position: relative;
 }
 
 /* 드롭다운 화살표 */
-.dropdown .arrow {
+.dropdown_ny .arrow_ny {
     font-size: 12px;
     margin-left: 5px;
 }
 
 /* 숨겨진 서브 메뉴 박스 */
-.dropdown-menu {
+.dropdown-menu_ny {
     position: absolute;
-    top: 100%;               /* 부모 바로 아래에 위치 */
+    top: 100%;
     left: 0;
     min-width: 180px;
     background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25); /* 그림자 */
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     padding: 10px 0;
     border-radius: 4px;
-    display: none;           /* 평소엔 숨김 */
-    flex-direction: column;  /* 세로 나열 */
-    gap: 0 !important;       /* 상위 ul의 gap 무시 */
+    
+    /* display: none 강제 적용 */
+    display: none !important;
+    
+    flex-direction: column;
+    gap: 0 !important;
 }
 
 /* 마우스를 올리면 서브 메뉴 보이기 */
-.dropdown:hover > .dropdown-menu {
-    display: flex; /* 보이게 변경 */
+.dropdown_ny:hover > .dropdown-menu_ny {
+    display: flex !important;
 }
 
-/* 드롭다운 내부 링크 스타일 (흰 배경이라 글자는 검게) */
-.dropdown-menu a {
+/* 드롭다운 내부 링크 스타일 */
+.dropdown-menu_ny a {
     color: #3c4858;
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu_ny a:hover {
     color: #47b2e4;
 }
 
 /* Deep Dropdown (2차 메뉴) 위치 잡기 */
-.deep-dropdown {
+.deep-dropdown_ny {
     position: relative;
 }
 
-.deep-dropdown-menu {
+/* --- Deep Dropdown (2차 메뉴) 스타일 --- */
+
+/* 1. 기본 상태: 무조건 숨김 */
+.deep-dropdown-menu_ny {
     position: absolute;
     top: 0;
-    left: 100%; /* 오른쪽으로 펼쳐짐 */
+    right: 108%; 
+    left: auto;  
+    
     min-width: 180px;
     background: #fff;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     padding: 10px 0;
     border-radius: 4px;
-    display: none;
-    list-style: none;
+    z-index: 1000;
+    display: none !important;
 }
 
-.deep-dropdown:hover > .deep-dropdown-menu {
-    display: block;
+/* 2. 호버 상태: 정확히 해당 줄에 마우스가 있을 때만 보임 */
+.deep-dropdown_ny:hover > .deep-dropdown-menu_ny {
+    display: block !important;
 }
 
 
 /* --- 4. Get Started 버튼 스타일 --- */
-.btn-get-started {
-    padding: 8px 25px;
-    margin-left: 10px;        /* 왼쪽 메뉴와 간격 추가 */
-    border-radius: 50px;      /* 둥근 모서리 */
+.btn-get-started_ny {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    background-color: #47b2e4; 
     color: #fff;
-    font-size: 14px;
-    font-weight: 600;         /* 글자 두껍게 */
-    border: 2px solid #47b2e4; /* 테두리 */
-    background: transparent;  /* 배경 투명 */
-    white-space: nowrap;      /* 줄바꿈 방지 */
-    transition: 0.3s;
+    text-decoration: none;
 }
 
 /* 버튼 마우스 호버 효과 */
-.btn-get-started:hover {
-    background: #31a9e1;
-    border-color: #31a9e1;
+.btn-get-started_ny:hover {
+    background-color: #209dd8;
     color: #fff;
 }

@@ -1,129 +1,125 @@
-#topbar {
-    background-color: #181e4b; /* 헤더보다 더 진한 남색 */
-    height: 40px;              /* 얇은 높이 */
+/* =======================================================
+   Top Bar Style (Bootstrap Icons Ver.) - NY Version
+   ======================================================= */
+
+#topbar_ny {
+    background-color: #023B6D; 
+    height: 35px;              
     width: 100%;
-    position: fixed;           /* 화면 고정 */
+    position: fixed;           
     top: 0;
     left: 0;
-    z-index: 1000;             /* 헤더(999)보다 더 위에 오도록 설정 */
+    z-index: 1000;             
     
     display: flex;
-    justify-content: space-between; /* 양쪽 끝 정렬 */
+    justify-content: space-between; 
     align-items: center;
-    padding: 0 15px;
+    padding: 0 0 0 10px; 
     font-family: sans-serif;
     color: #fff;
     border-bottom: 1px solid #2a305e;
 }
 
 /* --- 왼쪽 영역 --- */
-.topbar-left {
+.topbar-left_ny {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.bm-logo {
-    display: flex;       /* 이미지를 수직 중앙에 놓기 위해 */
+.bm-logo_ny {
+    display: flex;       
     align-items: center;
     text-decoration: none;
-    margin-right: 15px;  /* 옆에 있는 디바이스 아이콘과 간격 띄우기 */
+    margin-right: 15px;  
 }
 
-/* ★ 핵심: 이미지 크기 조절 ★ */
-.bm-logo img {
-    height: 20px;       /* Top Bar가 40px이므로 절반 정도 크기로 설정 */
-    width: auto;        /* 비율 유지 */
-    display: block;     /* 불필요한 여백 제거 */
+.bm-logo_ny img {
+    height: 25px;       
+    width: auto;        
+    display: block;     
 }
 
-.bm-logo .highlight {
-    color: #47b2e4; /* 포인트 색상 */
-}
-
-/* 디바이스 아이콘 (CSS로 사각형 그리기) */
-.device-icons {
+/* [수정됨] 디바이스 아이콘 영역 */
+.device-icons_ny {
     display: flex;
-    align-items: flex-end; /* 바닥 기준 정렬 */
-    gap: 8px;
-    opacity: 0.6; /* 약간 흐리게 */
+    align-items: center; /* 아이콘 수직 중앙 정렬 */
+    gap: 15px;           /* 아이콘 사이 간격 */
+    color: #fff;         /* 기본 흰색 */
+    opacity: 0.6;        /* 약간 흐리게 (원본 느낌) */
 }
 
-/* 데스크탑 모양 */
-.icon-desktop {
-    width: 14px;
-    height: 10px;
-    border: 2px solid #fff;
-    border-radius: 1px;
+/* [수정됨] 아이콘 개별 스타일 (Bootstrap Icons) */
+.device-icons_ny i {
+    font-size: 16px;     /* 아이콘 크기 설정 */
+    cursor: pointer;     /* 마우스 올리면 손가락 모양 */
+    transition: 0.3s;
 }
-/* 태블릿 모양 */
-.icon-tablet {
-    width: 10px;
-    height: 12px;
-    border: 2px solid #fff;
-    border-radius: 1px;
+
+/* 마우스 올리면 진하게 & 파란색 효과 */
+.device-icons_ny i:hover {
+    opacity: 1;
+    color: #47b2e4;
 }
-/* 모바일 모양 */
-.icon-mobile {
-    width: 7px;
-    height: 12px;
-    border: 2px solid #fff;
-    border-radius: 1px;
-}
+
+/* --- (기존의 .icon-desktop_ny, .icon-tablet_ny 등 도형 그리는 코드는 삭제됨) --- */
+
 
 /* --- 중앙 영역 --- */
-.topbar-center {
+.topbar-center_ny {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.theme-name {
+.theme-name_ny {
     font-weight: 700;
     font-size: 15px;
 }
 
-.nav-arrow {
-    color: #888;
+.nav-arrow_ny {
+    color: #9AB2C5;
     text-decoration: none;
     font-size: 14px;
 }
 
-.nav-arrow:hover {
+.nav-arrow_ny:hover {
     color: #fff;
 }
 
 /* --- 오른쪽 영역 --- */
-.topbar-right {
+.topbar-right_ny {
     display: flex;
     align-items: center;
     gap: 20px;
+    height: 100%;
 }
 
-.share-icon {
-    color: #fff;
+.share-icon_ny {
+    color: #9AB2C5;
     font-size: 18px;
     text-decoration: none;
 }
 
-.btn-download {
-    background-color: #0d6efd; /* 밝은 파란색 버튼 */
+.btn-download_ny {
+    background-color: #00A6EB; 
     color: #fff;
     text-decoration: none;
-    padding: 5px 15px;
+    height: 100%;        /* 부모 높이(40px)를 꽉 채움 */
+    padding: 0 25px;
     font-size: 13px;
-    font-weight: 600;
-    border-radius: 4px;
+    font-weight: 800;
+    /* border-radius: 4px; */
     display: flex;
     align-items: center;
     gap: 5px;
     transition: 0.3s;
 }
 
-.btn-download:hover {
-    background-color: #0b5ed7;
+.btn-download_ny:hover {
+    background-color: #00B4FF;
 }
 
-.icon-down {
-    font-size: 10px;
+.icon-down_ny {
+    font-size: 15px;
 }
