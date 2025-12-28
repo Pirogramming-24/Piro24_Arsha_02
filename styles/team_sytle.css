@@ -1,0 +1,122 @@
+/* ===== TEAM SECTION ===== */
+#team {
+  padding: 80px 0;
+  background-color: #f5f7fa;
+}
+
+.team-header_cr {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-header_cr h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #37517e;
+}
+
+.team-bar_cr {
+  width: 60px;
+  height: 3px;
+  background-color: #47b2e4;
+  margin: 15px auto;
+}
+
+.team-header_cr p {
+  color: #6c757d;
+  font-size: 15px;
+}
+
+/* ===== CARDS ===== */
+.team-cards_cr {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.team-card_cr {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+/*hover기능!!!!!*/
+.team-card_cr:hover {
+  transform: translateY(-10px);
+}
+
+.team-card_cr img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== CARD INFO ===== */
+.team-info_cr h3 {
+  font-size: 20px;
+  color: #37517e;
+}
+
+.team-info_cr span {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.info-bar_cr {
+  width: 50px;
+  height: 2px;
+  background-color: #47b2e4;
+  margin: 10px 0;
+}
+
+.team-info_cr p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social_cr {
+  display: flex;
+  gap: 10px;
+}
+
+.social_cr a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #eff2f8;
+  color: #37517e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/*hover기능!!!!!*/
+.social_cr a:hover {
+  background-color: #47b2e4;
+  color: #fff;
+}
+
+/* ===== 반응형!!!!!!!!!!!!!!!! ===== */
+@media (max-width: 768px) {
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
