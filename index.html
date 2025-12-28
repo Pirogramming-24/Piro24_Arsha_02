@@ -3,26 +3,756 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arsha Clone</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/topbar_style.css">
+    <link rel="stylesheet" href="styles/header_style.css">
+    <link rel="stylesheet" href="styles/home_style.css">
+    <link rel="stylesheet" href="styles/clients_style.css">
+    <link rel="stylesheet" href="styles/footer_style.css">
+    <link rel="stylesheet" href="styles/team_style.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/pricing_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header> <!--제일 위에 고정되어 있는 메뉴바-->
-    <!--반응형으로 화면 줄이면 바에 햄버거 나와야 함 -->
-`
-    <div class="Home"></div>
-    <div class="About"></div>
-    <div class="Services"></div>
-    <div class="Portfolio"></div>
-    <div class="Team"></div>
-    <div class="Pricing"></div>
-    <div class="Blog"></div>
-    <div class="Dropdown"></div>
-    <div class="Contact"></div>
+
+    <div id="topbar_ny">
+        <div class="topbar-left_ny">
+            <a href="#" class="bm-logo_ny">
+                <img src="https://bootstrapmade.com/assets/img/logo.png" alt="BootstrapMade Logo">
+            </a>
+            
+            <div class="device-icons_ny">
+                <i class="bi bi-display"></i>
+                <i class="bi bi-tablet"></i>
+                <i class="bi bi-phone"></i>
+            </div>
+        </div>
+
+        <div class="topbar-center_ny">
+            <a href="#" class="nav-arrow_ny">❮</a>
+            <span class="theme-name_ny">Arsha</span>
+            <a href="#" class="nav-arrow_ny">❯</a>
+        </div>
+
+        <div class="topbar-right_ny">
+            <a href="#" class="share-icon_ny">
+                <i class="bi bi-box-arrow-up-right"></i>
+            </a> 
+
+            <a href="#" class="btn-download_ny">
+                <i class="bi bi-download"></i>
+                <span>DOWNLOAD</span>
+            </a>
+        </div>
+    </div>
+
+    <header id="header_ny" class="fixed-header_ny">
+        <div class="container_ny"> 
+            <h1 class="logo_ny">
+                <a href="#home_ny">ARSHA</a>
+            </h1>
+
+            <nav class="navbar_ny">
+                <ul>
+                    <li><a href="#home_ny" class="nav-link_ny active_ny">Home</a></li>
+                    <li><a href="#about_ny" class="nav-link_ny">About</a></li>
+                    <li><a href="#services_ny" class="nav-link_ny">Services</a></li>
+                    <li><a href="#portfolio_ny" class="nav-link_ny">Portfolio</a></li>
+                    <li><a href="#team_ny" class="nav-link_ny">Team</a></li>
+                    <li><a href="#pricing_ny" class="nav-link_ny">Pricing</a></li>
+                    <li><a href="#blog_ny" class="nav-link_ny">Blog</a></li>
+
+                    <li class="dropdown_ny">
+                        <a href="#">Dropdown <span class="arrow_ny">▼</span></a>
+                        <ul class="dropdown-menu_ny">
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="deep-dropdown_ny">
+                                <a href="#">Deep Drop Down <span class="arrow_ny">▼</span></a>
+                                <ul class="deep-dropdown-menu_ny">
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#contact_ny" class="nav-link_ny">Contact</a></li>
+
+                    <li><a href="#about_ny" class="btn-get-started_ny">Get Started</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle_ny d-xl-none_ny bi bi-list"></i>
+        </div>
+    </header>
+
+    <section id="home_ny" class="home-section_ny">
+        <div class="container_ny">
+            
+            <div class="row_ny">
+                <div class="home-content_ny">
+                    <h1>Better Solutions For Your Business</h1>
+                    <h2>We are team of talented designers making websites with Bootstrap</h2>
+                    
+                    <div class="home-btns_ny">
+                        <a href="#about_ny" class="btn-get-started_ny">Get Started</a>
+                        
+                        <a href="#" class="btn-watch-video_ny">
+                            <i class="bi bi-play-circle"></i> 
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home-img-container_ny">
+                    <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/hero-img.png" 
+                         alt="Hero Image" class="img-fluid_ny animated_ny">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="clients_ny" class="clients-section_ny">
+        <div class="container_ny">
+            <div class="clients-slider_ny"> <div class="slider-track_ny">
+                    
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-1.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-2.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-3.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-4.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-5.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-6.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-7.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-8.webp" alt=""> </div>
+
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-1.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-2.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-3.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-4.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-5.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-6.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-7.webp" alt=""> </div>
+                    <div class="slide_ny"> <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/clients/clients-8.webp" alt=""> </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="AboutUs_1_mw">
+            <h2>ABOUT US</h2>
+
+            <div class="AboutUs_content_mw">
+
+                <div class="left_about_mw">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <ul>
+                        <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                        <li>
+                            Ullamco laboris nisi ut aliquip ex ea commodo
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right-about_mw">
+                    <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#" class="btn_mw">READ MORE</a>
+                </div>
+
+            </div> <!-- 첫번째 aboutus 내용부분-->
+        </div>
+            
+
+        <div class="AboutUs_2_mw">
+            <h2>Eum ipsam laborum deleniti velit pariatur architecto aut nihil</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Duis aute irure dolor in reprehenderit
+            </p>
+            <ol>
+                <li>
+                    <h3>
+                        Non consectetur a erat nam at lectus urna duis?
+                    </h3>
+                    <p>Feugiat pretium nibh ipsum consequat. 
+                        Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. 
+                        Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                </li>
+                <li>
+                    <h3>
+                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                    </h3>
+                    <p>
+                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. 
+                        Id interdum velit laoreet id donec ultrices. 
+                        Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
+                        Est pellentesque elit ullamcorper dignissim. 
+                        Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </p>
+                </li>
+                <li>
+                    <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. 
+                        Faucibus pulvinar elementum integer enim. 
+                        Sem nulla pharetra diam sit amet nisl suscipit. 
+                        Rutrum tellus pellentesque eu tincidunt. 
+                        Lectus urna duis convallis convallis tellus. 
+                        Urna molestie at elementum eu facilisis sed odio morbi quis
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="AboutUs_3_mw">
+            <h2>Voluptatem dignissimos provident quasi corporis voluptas</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="graph_mw">
+
+                <div class="graph_bar_mw">
+                    <span class="skill_mw">HTML <i class="val_mw">100%</i></span>
+                    <div class="bar_wrap_mw">
+                        <div class="progress_bar_mw" role="progressbar" style="width: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="graph_bar_mw">
+                    <span class="skill_mw">HTML <i class="val_mw">90%</i></span>
+                    <div class="bar_wrap_mw">
+                        <div class="progress_bar_mw" role="progressbar" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="graph_bar_mw">
+                    <span class="skill_mw">HTML <i class="val_mw">75%</i></span>
+                    <div class="bar_wrap_mw">
+                        <div class="progress_bar_mw" role="progressbar" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="graph_bar_mw">
+                    <span class="skill_mw">HTML <i class="val_mw">55%</i></span>
+                    <div class="bar_wrap_mw">
+                        <div class="progress_bar_mw" role="progressbar" style="width: 55%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="portfolioTitle_hs">
+            <h2>PORTFOLIO</h2>
+            <hr>
+            <p>"Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit"</p>
+        </div>
+        <div class="portfolioBody_hs">
+            <div class="layout_hs"> 
+                
+                <input type="radio" name="filter" id="filter-all" checked>
+                <input type="radio" name="filter" id="filter-app">
+                <input type="radio" name="filter" id="filter-card">
+                <input type="radio" name="filter" id="filter-web">
+
+                
+                <ul class="portfolio-filters_hs">
+                    <li><label for="filter-all">All</label></li>
+                    <li><label for="filter-app">App</label></li>
+                    <li><label for="filter-card">Card</label></li>
+                    <li><label for="filter-web">Web</label></li>
+                </ul>
+                
+
+                <div class="movingImg_hs">
+                    <div class="card-wrapper">
+                        <div class="imgCard card-cactus">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-portrait-1.webp" alt="선인장">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>App 1</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-ampoule">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-1.webp" alt="앰플">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>Product 1</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-paint">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-3.webp" alt="페인트">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>Branding 1</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-writing">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-4.webp" alt="필기구">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>App 2</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-flower-brush">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-portrait-2.webp" alt="꽃과 붓">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>Product 2</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-highlight-pens">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-portrait-3.webp" alt="형광펜">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>Branding 2</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-string">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-7.webp" alt="실과 가위">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>App 3</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-coloring-pencils">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-8.webp" alt="색연필">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>Product 3</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imgCard card-glasses-book">
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-9.webp" alt="책과 안경">
+                            <div class="portfolio-info">
+                                <div class="text">
+                                    <h4>Branding 3</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                </div>
+                                <div class="button">
+                                    <span class="readingGlasses_hs">
+                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
+                                    </span>
+                                    <span class="chain_hs">
+                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="team-header_cr">
+            <h2>TEAM</h2>
+            <p>
+                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+            </p>
+        </div>
+
+        <div class="team-cards_cr">
+            <!-- Card 1 -->
+            <div class="team-card_cr">
+                <div class="team-card-img-wrapper_cr">
+                    <img src="images_cr/team-card-1.webp" alt="member">
+                </div>
+                <div class="team-info_cr">
+                    <h3>Walter White</h3>
+                    <span>Chief Executive Officer</span>
+                    <div class="info-bar_cr"></div>
+                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                    
+                    <div class="social_cr">
+                        <a href="#">X</a>
+                        <a href="#">F</a>
+                        <a href="#">I</a>
+                        <a href="#">in</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="team-card_cr">
+                <div class="team-card-img-wrapper_cr">
+                    <img src="images_cr/team-card-2.webp" alt="member">
+                </div>
+                <div class="team-info_cr">
+                    <h3>Sarah Jhonson</h3>
+                    <span>Product Manager</span>
+                    <div class="info-bar_cr"></div>
+                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                    
+                    <div class="social_cr">
+                        <a href="#">X</a>
+                        <a href="#">F</a>
+                        <a href="#">I</a>
+                        <a href="#">in</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="team-card_cr">
+                <div class="team-card-img-wrapper_cr">
+                    <img src="images_cr/team-card-3.webp" alt="member">
+                </div>
+                <div class="team-info_cr">
+                    <h3>William Anderson</h3>
+                    <span>CTO</span>
+                    <div class="info-bar_cr"></div>
+                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                    
+                    <div class="social_cr">
+                        <a href="#">X</a>
+                        <a href="#">F</a>
+                        <a href="#">I</a>
+                        <a href="#">in</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="team-card_cr">
+                <div class="team-card-img-wrapper_cr">
+                    <img src="images_cr/team-card-4.webp" alt="member">
+                </div>
+                <div class="team-info_cr">
+                    <h3>Amanda Jepson</h3>
+                    <span>Accountant</span>
+                    <div class="info-bar_cr"></div>
+                    <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                    
+                    <div class="social_cr">
+                        <a href="#">X</a>
+                        <a href="#">F</a>
+                        <a href="#">I</a>
+                        <a href="#">in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="section_pricing_sy">
+            <div class="container_title_sy">
+                <h2>PRICING</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
+
+            <div class="container_content_sy">
+                <div class="row_item_sy">
+                    <!--flex로 설정해야됨-->
+                    <div class="box_pricing-item_sy">
+                        <div class="pricing-item_sy">
+                            <h3><span class="first_letter_sy">F</span>ree <span class="first_letter_sy">P</span>lan</h3>
+                            <h4>
+                                <sup>$</sup>0<span>/ month</span>
+                            </h4>
+
+                            <ul>
+                                <li>
+                                    <i class="icon_check_sy">
+                                    </i>
+                                    <span>Quam adipiscing vitae proin</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Nec feugiat nisl pretium</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Nulla at volutpat diam uteera</span>
+                                </li>
+                                <li>
+                                    <i class="icon_x_sy"></i>
+                                    <span>Pharetra massa massa ultricies</span>
+                                </li>
+                                <li>
+                                    <i class="icon_x_sy"></i>
+                                    <span>Massa ultricies mi quis hendrerit</span>
+                                </li>
+                            </ul>
+                            <a href="#" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="box_pricing-item_sy">
+                        <div class="pricing-item_sy">
+                            <h3><span class="first_letter_sy">B</span>usiness <span class="first_letter_sy">P</span>lan</h3>
+                            <h4>
+                                <sup>$</sup>29<span>/ month</span>
+                            </h4>
+
+                            <ul>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Quam adipiscing vitae proin</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Nec feugiat nisl pretium</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Nulla at volutpat diam uteera</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Pharetra massa massa ultricies</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Massa ultricies mi quis hendrerit</span>
+                                </li>
+                                
+                            </ul>
+                            <a href="#" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
 
 
-    <footer></footer>
 
+                        </div>
+                    </div>
+                    
+                    <div class="box_pricing-item_sy">
+                        <div class="pricing-item_sy">
+                            <h3><span class="first_letter_sy">D</span>eveloper <span class="first_letter_sy">P</span>lan</h3>
+                            <h4>
+                                <sup>$</sup>49<span>/ month</span>
+                                
+                            </h4>
 
+                            <ul>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Quam adipiscing vitae proin</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Nec feugiat nisl pretium</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Nulla at volutpat diam uteera</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Pharetra massa massa ultricies</span>
+                                </li>
+                                <li>
+                                    <i class="icon_check_sy"></i>
+                                    <span>Massa ultricies mi quis hendrerit</span>
+                                </li>
+                                
+                            </ul>
+                            <a href="#" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="section_testimonials_sy">
+            <div class="container_title_sy"></div>
+            <div class="container_content_sy">
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>CONTACT</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </section>
+
+    <footer id="footer_ny">
+        <div class="footer-newsletter_ny">
+            <div class="container_ny">
+                <div class="newsletter-content_ny">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                    
+                    <form action="" method="post">
+                        <input type="email" name="email" required>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top_ny">
+            <div class="container_ny">
+                <div class="row_ny">
+
+                    <div class="footer-contact_ny">
+                        <h3>ARSHA</h3>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="footer-links_ny">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#home_ny">Home</a></li>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#about_ny">About us</a></li>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#services_ny">Services</a></li>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#">Terms of service</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links_ny">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#">Web Design</a></li>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#">Web Development</a></li>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#">Product Management</a></li>
+                            <li><span class="chevron_ny">&rsaquo;</span> <a href="#">Marketing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-social_ny">
+                        <h4>Follow Us</h4>
+                        <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                        <div class="social-links_ny">
+                            <a href="#" class="twitter_ny"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="facebook_ny"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram_ny"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="linkedin_ny"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom_ny">
+            <div class="container_ny">
+                <div class="copyright_ny">
+                    &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits_ny">
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top_ny">↑</a>
 
 </body>
-</html>`
+</html>
