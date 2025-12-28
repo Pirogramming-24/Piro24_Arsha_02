@@ -1,6 +1,6 @@
 :root {
   /*--card-size: 300px;*/
-  --card: clamp(300px, 20vw, 400px);
+  --card: clamp(400px, 20vw, 500px);
   --gap: clamp(25px, 3vw, 25px);
 }
 
@@ -13,7 +13,7 @@
     
 }
 .portfolio-section .portfolioTitle_hs h2{
-    font-size: 38px;
+    font-size: 38px; font-weight: 900; color: rgb(60, 80, 124);
     margin-bottom: 5px; padding: 3px;
 }
 .portfolio-section .portfolioTitle_hs hr{
@@ -157,35 +157,34 @@
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text{display:inline-block; align-content: flex-start;}
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>h4{padding:5px; margin: 0 0; font-size: 18px; font-weight: 900; color: rgb(60, 80, 124);}
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>p{padding:5px; margin: 0; font-size: 14px; color: gray;}
-.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button{display:inline-block; padding: 6px 12px;justify-content: center; align-content: center;}
-.portfolio-section .readingGlasses_hs,
-.portfolio-section .chain_hs {
-    font-size: 10px; text-align: center; 
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: black; color: white;
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button{display:flex; flex-wrap: row nowrap; padding: 3px 6px; margin: 0; justify-content: center; align-content: center;}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .readingGlasses_hs{
+    width: 40px;
+    height: 40px;
+
+    background-image: url("./icons/icon_reading_chain.svg");
+    background-repeat: no-repeat;
+
+    background-size: 200% auto;     
+    background-position: 3% 0%;  
+
 }
-.portfolio-section .readingGlasses_hs:hover,
-.portfolio-section .chain_hs:hover{
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .chain_hs {
+    width: 40px;
+    height: 40px;
+
+    background-image: url("./icons/icon_reading_chain.svg");
+    background-repeat: no-repeat;
+
+    background-size: 200% auto;     
+    background-position: 90% 0%;  
+
+}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .readingGlasses_hs:hover,
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .chain_hs:hover{
     background-color: rgb(85, 176, 226);
+    cursor: pointer;
 }
-
-/* 돋보기 */
-.portfolio-section .readingGlasses_hs {
-    font-size: 10px; text-align: center;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: black; color: white;
-  
-}
-
-/* 사슬 */
-.portfolio-section .chain_hs {
-  background-position: -520px center;
-}
-
 
 /* .movingImg_hs .imgCard:hover .portfolio-info {
     transform: translateY(0);
@@ -351,7 +350,7 @@
         width: calc(var(--card));
     }
 
-  .movingImg_hs {height: 2600px;}  /* 카드 개수 × 간격 */
+  .movingImg_hs {height: 2600px;}  
 
   .movingImg_hs .imgCard { width: 100%;left: 0 !important;}
 
@@ -397,9 +396,9 @@ web=>paint, pens, book
   }
 } */
 
-@media (max-width: 1400px) {
+@media (max-width: 1080px) {
   :root {
-    --card-size: 260px;
+    --card: 260px;
   }
 }
 
