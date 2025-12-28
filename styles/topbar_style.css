@@ -1,0 +1,131 @@
+#topbar_ny {
+    background-color: #023B6D; 
+    height: 35px;              
+    width: 100%;
+    position: fixed;           
+    top: 0;
+    left: 0;
+    z-index: 1000;             
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 0 0 10px; 
+    font-family: sans-serif;
+    color: #fff;
+    border-bottom: 1px solid #2a305e;
+}
+
+/* --- 왼쪽 영역 --- */
+.topbar-left_ny {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bm-logo_ny {
+    display: flex;       
+    align-items: center;
+    text-decoration: none;
+    margin-right: 15px;  
+}
+
+.bm-logo_ny img {
+    height: 25px;       
+    width: auto;        
+    display: block;     
+}
+
+.device-icons_ny {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.device-icons_ny i {
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.device-icons_ny i:hover {
+    opacity: 1;
+    color: #47b2e4;
+}
+
+/* --- 중앙 영역 --- */
+.topbar-center_ny {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-name_ny {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.nav-arrow_ny {
+    color: #9AB2C5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-arrow_ny:hover {
+    color: #fff;
+}
+
+/* --- 오른쪽 영역 --- */
+.topbar-right_ny {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.share-icon_ny {
+    color: #9AB2C5;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn-download_ny {
+    background-color: #00A6EB; 
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.btn-download_ny:hover {
+    background-color: #00B4FF;
+}
+
+.icon-down_ny {
+    font-size: 15px;
+}
+
+/* 1. 화면 너비 1024px 이하 */
+@media (max-width: 1024px) {
+    .device-icons_ny {
+        display: none;
+    }
+}
+
+/* 2. 화면 너비 768px 이하 */
+@media (max-width: 768px) {
+    .bm-logo_ny {
+        display: none;
+    }
+    .topbar-left_ny {
+        display: none;
+    }
+}
