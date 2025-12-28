@@ -1,0 +1,219 @@
+/* 헤더 전체 틀 (상단 고정) */
+#header_ny {
+    background-color: #37517e;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 35px; /* Topbar 높이만큼 띄움 */
+    left: 0;
+    z-index: 999;
+    transition: all 0.5s;
+}
+
+/* 헤더 내부 컨테이너 (로고와 메뉴바 정렬) */
+#header_ny .container_ny {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- 1. 로고 스타일 --- */
+.logo_ny a {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* --- 2. 네비게이션바 스타일 --- */
+
+/* ul (메뉴 리스트) 가로 정렬 */
+.navbar_ny ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* 메뉴 링크 텍스트 */
+.navbar_ny a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+/* 마우스 올렸을 때 & 활성화된 메뉴 색상 */
+.navbar_ny a:hover, 
+.navbar_ny .active_ny {
+    color: #47b2e4;
+}
+
+/* --- 3. 드롭다운 메뉴 스타일 --- */
+.dropdown_ny {
+    position: relative;
+}
+
+/* 드롭다운 화살표 */
+.dropdown_ny .arrow_ny {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* 숨겨진 서브 메뉴 박스 */
+.dropdown-menu_ny {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    padding: 10px 0;
+    border-radius: 4px;
+    
+    /* display: none 강제 적용 */
+    display: none !important;
+    
+    flex-direction: column;
+    gap: 0 !important;
+}
+
+/* 마우스를 올리면 서브 메뉴 보이기 */
+.dropdown_ny:hover > .dropdown-menu_ny {
+    display: flex !important;
+}
+
+/* 드롭다운 내부 링크 스타일 */
+.dropdown-menu_ny a {
+    color: #3c4858;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dropdown-menu_ny a:hover {
+    color: #47b2e4;
+}
+
+/* Deep Dropdown (2차 메뉴) 위치 잡기 */
+.deep-dropdown_ny {
+    position: relative;
+}
+
+/* --- Deep Dropdown (2차 메뉴) 스타일 --- */
+
+/* 1. 기본 상태: 무조건 숨김 */
+.deep-dropdown-menu_ny {
+    position: absolute;
+    top: 0;
+    right: 108%; 
+    left: auto;  
+    
+    min-width: 180px;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    padding: 10px 0;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none !important;
+}
+
+/* 2. 호버 상태: 정확히 해당 줄에 마우스가 있을 때만 보임 */
+.deep-dropdown_ny:hover > .deep-dropdown-menu_ny {
+    display: block !important;
+}
+
+
+/* --- 4. Get Started 버튼 스타일 --- */
+.btn-get-started_ny {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    background-color: #47b2e4; 
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 버튼 마우스 호버 효과 */
+.btn-get-started_ny:hover {
+    background-color: #209dd8;
+    color: #fff;
+}
+
+/* 1. 기본 상태 (데스크탑, 1200px 초과): 햄버거 버튼 숨김 */
+.d-xl-none_ny {
+    display: none; 
+}
+
+/* 2. 화면 너비 1200px 이하일 때 적용 (모바일/태블릿) */
+@media (max-width: 1200px) {
+    .navbar_ny {
+        margin-left: auto; 
+    }
+
+    /* --- 1. 햄버거 버튼 스타일 (CSS로 그리기) --- */
+    .mobile-nav-toggle_ny {
+        display: block;        
+        width: 22px;           /* 버튼 너비 */
+        height: 22px;          /* 버튼 높이 */
+        cursor: pointer;
+        margin-left: 15px;
+        
+        /* 아이콘 중앙 정렬을 위한 설정 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-nav-toggle_ny.bi-list::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        box-shadow: 
+            0 -8px 0 0 #fff,
+            0  8px 0 0 #fff;
+    }
+
+    /* --- 2. 메뉴 숨김 및 버튼 배치 로직 --- */
+    
+    /* 네비게이션바 정렬 (버튼과 햄버거 가로 배치) */
+    .navbar_ny ul {
+        display: flex;
+        align-items: center; 
+        margin: 0; padding: 0;
+    }
+
+    /* 모든 메뉴(li) 숨김 */
+    .navbar_ny ul li {
+        display: none; 
+    }
+
+    /* 마지막 아이템(Get Started 버튼)만 다시 보이게 */
+    .navbar_ny ul li:last-child {
+        display: block;
+    }
+
+    /* Get Started 버튼 스타일 */
+    .btn-get-started_ny {
+        margin-left: 0; 
+        padding: 8px 20px;
+        white-space: nowrap;
+    }
+}
