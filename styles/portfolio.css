@@ -1,31 +1,48 @@
 :root {
   /*--card-size: 300px;*/
-  --card: clamp(240px, 20vw, 300px);
+  --card: clamp(300px, 20vw, 400px);
   --gap: clamp(25px, 3vw, 25px);
 }
 
-.Portfolio *{
-    align-content: center;
-    justify-content: center;
+.Portfolio {
+    background-color: white;
+    align-content: center; justify-content: center;
 }
 .portfolio-section .portfolioTitle_hs{
-    background-color: blueviolet;
     justify-content: center; text-align: center; padding: 10px;
+    
 }
 .portfolio-section .portfolioTitle_hs h2{
-
-    margin-bottom: 5px;
-    padding: 3px;
+    font-size: 38px;
+    margin-bottom: 5px; padding: 3px;
 }
 .portfolio-section .portfolioTitle_hs hr{
-    width: 130px;
-    height: 1px;
+    position: relative;
+    background-color: lightgray;
+    width: 180px;
+    height: 2px;
     border: 0;
-    background-color: gray;
+    overflow: visible;
+
+    
 }
-.portfolio-section .portfolioTitle_hs p{}
+.portfolio-section .portfolioTitle_hs hr::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;                        
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 3px;
+  background-color: rgb(85, 176, 226);
+}
+
+
+.portfolio-section .portfolioTitle_hs p{
+    font-size: 17px;
+}
 .portfolioBody_hs{
-    background-color: aqua;
+    height: 1500px;
     position: relative;
     display: flex;
     align-content: center;
@@ -33,13 +50,14 @@
     padding: 30px;
 }
 .portfolio-section .portfolioBody_hs .layout_hs{
-    background-color: yellow;
 
     width: 100%;           /* 화면 크기에 따라 자동 */
-    max-width: 1200px;     /* 너무 커지지 않게 */
+    max-width: 1400px;     /* 너무 커지지 않게 */
     margin: 0 auto;        /* 가운데 정렬 */
     padding: 0 24px;       /* 양쪽 여백 */
     box-sizing: border-box;
+
+    align-content: flex-start;
 }
 .portfolioBody_hs input[type="radio"] {
     display: none;
@@ -47,17 +65,14 @@
 
 
 .portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs{
-    background-color: antiquewhite;
-    justify-content: center; display: flex;
-
-    flex-direction: row; list-style: none;
+    padding: 10px;
+    justify-content: center; display: flex; flex-direction: row; list-style: none;
 }
 
 .portfolio-filters_hs label {
     display: block;
     padding: 7px 21px;
     margin: 10px;
-    background-color: pink;
     border-radius: 20px;
     cursor: pointer;
     color: black;
@@ -66,11 +81,13 @@
 
 .portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs li{
     padding: 10px 20px; margin: -3px;
-
+}
+.portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs li label{
+    margin: 0;  
 }
 
 .portfolio-section .portfolioBody_hs .layout_hs .portfolio-filters_hs label:hover{
-    background-color: skyblue;
+    background-color: rgb(85, 176, 226);
     color: white;
 }
 
@@ -80,7 +97,7 @@
 #filter-app:checked  ~ .portfolio-filters_hs label[for="filter-app"],
 #filter-card:checked ~ .portfolio-filters_hs label[for="filter-card"],
 #filter-web:checked  ~ .portfolio-filters_hs label[for="filter-web"] {
-    background-color: skyblue;
+    background-color: rgb(85, 176, 226);
     color: white;
 }
 
@@ -88,7 +105,6 @@
     position: relative; display: flex; justify-content: center;
     width: 100%;
     height: 800px;        /* 작업하기 편하게 임시로 크게 */
-    background-color: lightgray;
 
     
     /*
@@ -104,7 +120,6 @@
     width: calc(var(--card) * 3 + var(--gap) * 2);
     /* width: 1000px;  */
     height: 900px; margin: 0 auto;
-    background-color: pink;
 }
 
 
@@ -123,16 +138,15 @@
     height: auto;
     display: block;
 }
-.portfolio-info {
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info {
+    display: flex; justify-content: space-between;
     position: absolute;
     left: 0;
     bottom: 0;
 
-    width: 300px;
-    height: 100px;
+    width: 100%; height: 90px; margin: 0 0 ;
 
     background-color: rgba(255, 255, 255, 0.88);
-    opacity: 1;
 
     transform: translateY(100%);  /* ⭐ 자기 높이만큼 정확히 아래 */
     transition: transform 0.4s ease;
@@ -140,14 +154,40 @@
     padding: 12px 12px;
     box-sizing: border-box;
 }
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text{display:inline-block; align-content: flex-start;}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>h4{padding:5px; margin: 0 0; font-size: 18px; font-weight: 900; color: rgb(52, 52, 128);}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>p{padding:5px; margin: 0; font-size: 14px; color: gray;}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button{display:inline-block; padding: 6px 12px;justify-content: center; align-content: center;}
+.portfolio-section .readingGlasses_hs,
+.portfolio-section .chain_hs {
+    font-size: 10px; text-align: center; 
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: black; color: white;
+
+
+}
+
+/* 돋보기 */
+.portfolio-section .readingGlasses_hs {
+    font-size: 10px; text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: black; color: white;
+  
+}
+
+/* 사슬 */
+.portfolio-section .chain_hs {
+  background-position: -520px center;
+}
 
 
 /* .movingImg_hs .imgCard:hover .portfolio-info {
     transform: translateY(0);
 } */
-@media(min-width: 1048px){
-    
-}
 
 
 /*카드의 기본 상태 정의*/
@@ -217,33 +257,33 @@
 
 
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-cactus:hover .portfolio-info {
-    opacity: 0.88; transform: translateY(0);
+    transform: translateY(0);
 }
 
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-ampoule:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-paint:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-writing:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-flower-brush:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-highlight-pens:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-string:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-coloring-pencils:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-glasses-book:hover .portfolio-info {
-    opacity: 0.7; transform: translateY(0);
+    transform: translateY(0);
 }
 
 
@@ -296,7 +336,7 @@
 /*web 선택 시*/
 @media (max-width: 1047px) {
   #filter-web:checked ~ .movingImg_hs .card-wrapper .card-paint {top: 0; left: 0;}
-  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: 0; left: 265px;}
+  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: 0; left: 32h5px;}
   #filter-web:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(var(--card)*0.66 + var(--gap)); left: 0;}
   /* calc(var(--card)+ var(--gap)) */
 /* calc(var(--card)*0.66 + var(--gap)); left: 0 */
