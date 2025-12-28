@@ -165,8 +165,10 @@
     width: 30px;
     height: 30px;
     background-color: black; color: white;
-
-
+}
+.portfolio-section .readingGlasses_hs:hover,
+.portfolio-section .chain_hs:hover{
+    background-color: rgb(85, 176, 226);
 }
 
 /* 돋보기 */
