@@ -4,7 +4,7 @@
   --gap: clamp(25px, 3vw, 25px);
 }
 
-.Portfolio {
+.portfolio-section {
     background-color: white;
     align-content: center; justify-content: center;
 }
