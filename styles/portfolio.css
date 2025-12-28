@@ -1,8 +1,14 @@
-:root {
-  /*--card-size: 300px;*/
+/* :root {
   --card: clamp(400px, 20vw, 500px);
   --gap: clamp(25px, 3vw, 25px);
+
+} */
+
+:root {
+  --card: clamp(280px, 30vw, 400px);
+  --gap: clamp(16px, 2vw, 25px);
 }
+
 
 .portfolio-section {
     background-color: white;
@@ -54,7 +60,6 @@
     padding: 30px;
 }
 .portfolio-section .portfolioBody_hs .layout_hs{
-
     width: 100%;           /* 화면 크기에 따라 자동 */
     max-width: 1400px;     /* 너무 커지지 않게 */
     margin: 0 auto;        /* 가운데 정렬 */
@@ -120,7 +125,7 @@
 }
 
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper{
-    position: relative;
+    position: relative; box-sizing: border-box;flex: 0 0 auto;
     width: calc(var(--card) * 3 + var(--gap) * 2);
     /* width: 1000px;  */
     height: 900px; margin: 0 auto;
@@ -361,7 +366,7 @@
         width: calc(var(--card));
     }
 
-  .movingImg_hs {height: 2600px;}  
+  /* .movingImg_hs {height: 2600px;}   */
 
   .movingImg_hs .imgCard { width: 100%;left: 0 !important;}
 
@@ -391,8 +396,8 @@
 
 @media (max-width: 767px) {
   #filter-web:checked ~ .movingImg_hs .card-wrapper .card-paint {top: 0px;}
-  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: calc((0.66*var(—card) + var(—gap)));}
-  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(0.66*var(—card) + 1.33*var(—card) + var(—gap)*2);}
+  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: calc((0.66*var(--card) + var(--gap)));}
+  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(0.66*var(--card) + 1.33*var(--card) + var(--gap)*2);}
 }
 /*
 app=> 
@@ -406,12 +411,6 @@ web=>paint, pens, book
     width: 45%;
   }
 } */
-
-@media (max-width: 1080px) {
-  :root {
-    —card: 260px;
-  }
-}
 
 
 
