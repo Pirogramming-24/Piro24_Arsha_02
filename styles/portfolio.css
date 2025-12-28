@@ -14,7 +14,7 @@
 }
 .portfolio-section .portfolioTitle_hs h2{
     font-size: 38px; font-weight: 900; color: rgb(60, 80, 124);
-    margin-bottom: 5px; padding: 3px;
+    margin-bottom: 5px; padding: 10px;
 }
 .portfolio-section .portfolioTitle_hs hr{
     position: relative;
@@ -24,6 +24,9 @@
     border: 0;
     overflow: visible;
 
+    
+
+    margin: 0 auto;
     
 }
 .portfolio-section .portfolioTitle_hs hr::after{
@@ -39,6 +42,7 @@
 
 
 .portfolio-section .portfolioTitle_hs p{
+    padding: 20px;
     font-size: 17px;
 }
 .portfolioBody_hs{
@@ -380,8 +384,8 @@
 
 @media (max-width: 767px) {
   #filter-web:checked ~ .movingImg_hs .card-wrapper .card-paint {top: 0px;}
-  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: calc((0.66*var(--card) + var(--gap)));}
-  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(0.66*var(--card) + 1.33*var(--card) + var(--gap)*2);}
+  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: calc((0.66*var(—card) + var(—gap)));}
+  #filter-web:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(0.66*var(—card) + 1.33*var(—card) + var(—gap)*2);}
 }
 /*
 app=> 
@@ -398,7 +402,7 @@ web=>paint, pens, book
 
 @media (max-width: 1080px) {
   :root {
-    --card: 260px;
+    —card: 260px;
   }
 }
 
