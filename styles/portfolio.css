@@ -155,7 +155,7 @@
     box-sizing: border-box;
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text{display:inline-block; align-content: flex-start;}
-.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>h4{padding:5px; margin: 0 0; font-size: 18px; font-weight: 900; color: rgb(52, 52, 128);}
+.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>h4{padding:5px; margin: 0 0; font-size: 18px; font-weight: 900; color: rgb(60, 80, 124);}
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .text>p{padding:5px; margin: 0; font-size: 14px; color: gray;}
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button{display:inline-block; padding: 6px 12px;justify-content: center; align-content: center;}
 .portfolio-section .readingGlasses_hs,
