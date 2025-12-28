@@ -1,0 +1,102 @@
+.clients-section_ny {
+    padding: 25px 0;       
+    background-color: #f3f5fa; 
+    overflow: hidden;      
+}
+
+/* 1. 슬라이더 창문 */
+.clients-slider_ny {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 2. 움직이는 긴 트랙 */
+.slider-track_ny {
+    display: flex;
+    align-items: center;
+    
+    /* (화면 100% / 6개 보이기) * 총 16개 아이템 */
+    width: calc((100% / 6) * 16); 
+    
+    /* 애니메이션: 30초 동안, 일정하게, 무한반복 */
+    animation: scroll_ny 30s linear infinite;
+}
+
+/* 마우스 올리면 멈춤 */
+.slider-track_ny:hover {
+    animation-play-state: paused;
+}
+
+/* 3. 개별 아이템 (박스) */
+.slide_ny {
+    /* 트랙 너비의 1/16 만큼 차지 */
+    width: calc(100% / 16); 
+    
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 4. 이미지 스타일 */
+.slide_ny img {
+    width: 100%;
+    height: 25px;
+    width: 80px;
+    display: block;
+    
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* 마우스 올리면 선명하게 + 확대 */
+.slide_ny img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* 5. 움직임 정의 */
+@keyframes scroll_ny {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        /* 딱 절반(-50%)만큼 가면 다시 0으로 텔레포트 */
+        transform: translateX(-50%); 
+    }
+}
+
+/* 1. 기본 (1200px 이상): 6개 보이기 */
+.slider-track_ny {
+    width: calc((100% / 6) * 16);
+}
+
+/* 2. 992px ~ 1200px: 5개 보이기 */
+@media (max-width: 1200px) {
+    .slider-track_ny {
+        width: calc((100% / 5) * 16);
+    }
+}
+
+/* 3. 640px ~ 992px: 4개 보이기 */
+@media (max-width: 992px) {
+    .slider-track_ny {
+        width: calc((100% / 4) * 16);
+    }
+}
+
+/* 4. 480px ~ 640px: 3개 보이기 */
+@media (max-width: 640px) {
+    .slider-track_ny {
+        width: calc((100% / 3) * 16);
+    }
+}
+
+/* 5. 320px ~ 480px: 2개 보이기 (모바일) */
+@media (max-width: 480px) {
+    .slider-track_ny {
+        width: calc((100% / 2) * 16);
+    }
+}
