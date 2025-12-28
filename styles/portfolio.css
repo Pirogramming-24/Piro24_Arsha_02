@@ -166,29 +166,36 @@
     width: 40px;
     height: 40px;
 
-    background-image: url("./icons/icon_reading_chain.svg");
+    /* background-image: url("./icons/icon_reading_chain.svg");
     background-repeat: no-repeat;
 
     background-size: 200% auto;     
-    background-position: 3% 0%;  
+    background-position: 3% 0%;   */
 
 }
 .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .chain_hs {
     width: 40px;
     height: 40px;
 
-    background-image: url("./icons/icon_reading_chain.svg");
+    /* background-image: url("./icons/icon_reading_chain.svg");
     background-repeat: no-repeat;
 
     background-size: 200% auto;     
-    background-position: 90% 0%;  
+    background-position: 90% 0%;   */
 
 }
-.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .readingGlasses_hs:hover,
-.portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper .portfolio-info .button .chain_hs:hover{
-    background-color: rgb(85, 176, 226);
+
+.bi-zoom-in{
+    width: 20px; height: 20px; padding: 5px; margin: 5px;
+}
+.bi-link-45deg{
+    width: 20px; height: 20px; padding: 5px; margin: 5px;
+}
+.bi-zoom-in:hover, .bi-link-45deg:hover{
+    color: rgb(85, 176, 226);
     cursor: pointer;
 }
+
 
 /* .movingImg_hs .imgCard:hover .portfolio-info {
     transform: translateY(0);
