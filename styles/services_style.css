@@ -25,7 +25,7 @@
   /*애니메이션*/
   animation: scroll_down_cr linear;
   animation-timeline: scroll();
-  animation-range: 15% 18%; /*여기부분만 바꾸기*/
+  animation-range: 14% 18%; /*여기부분만 바꾸기*/
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -165,7 +165,7 @@
   /*애니메이션*/
   animation: scroll_down_cr linear;
   animation-timeline: scroll();
-  animation-range: 17% 18%; /*여기부분만 바꾸기*/
+  animation-range: 16% 18%; /*여기부분만 바꾸기*/
   animation-iteration-count: 1;
   /*animation-fill-mode: forwards;*/
 }

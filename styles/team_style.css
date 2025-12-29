@@ -24,7 +24,7 @@
   /*애니메이션*/
   animation: scroll_down_cr linear;
   animation-timeline: scroll();
-  animation-range: 48% 51%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
+  animation-range: 47% 51%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
   animation-fill-mode: forwards;
 }
 
