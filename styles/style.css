@@ -6,3 +6,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/*이상해지면 걍 삭제 해보기*/
+section {
+  padding: 80px 10%;
+}

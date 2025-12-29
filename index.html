@@ -12,11 +12,19 @@
     <link rel="stylesheet" href="styles/clients_style.css">
     <link rel="stylesheet" href="styles/footer_style.css">
     <link rel="stylesheet" href="styles/team_style.css">
+    <link rel="stylesheet" href="styles/services_style.css">
+    <link rel="stylesheet" href="styles/blog_style.css">
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/pricing_style.css">
+    <link rel="stylesheet" href="styles/about_style.css">
+    <link rel="stylesheet" href="styles/contact_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
 </head>
 <body>
 
@@ -151,7 +159,7 @@
     </section>
 
     <section id="about" class="about-section">
-      <div class="AboutUs_1_mw">
+        <div class="AboutUs_1_mw">
             <h2>ABOUT US</h2>
 
             <div class="AboutUs_content_mw">
@@ -159,9 +167,14 @@
                 <div class="left_about_mw">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <ul>
-                        <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
                         <li>
+                            <i class="bi bi-check2-circle"></i>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
+                            Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
                             Ullamco laboris nisi ut aliquip ex ea commodo
                         </li>
                     </ul>
@@ -177,76 +190,116 @@
             </div> <!-- 첫번째 aboutus 내용부분-->
         </div>
             
-
         <div class="AboutUs_2_mw">
-            <h2>Eum ipsam laborum deleniti velit pariatur architecto aut nihil</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Duis aute irure dolor in reprehenderit
-            </p>
-            <ol>
-                <li>
-                    <h3>
-                        Non consectetur a erat nam at lectus urna duis?
-                    </h3>
-                    <p>Feugiat pretium nibh ipsum consequat. 
-                        Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. 
-                        Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </li>
-                <li>
-                    <h3>
-                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                    </h3>
-                    <p>
-                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. 
-                        Id interdum velit laoreet id donec ultrices. 
-                        Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-                        Est pellentesque elit ullamcorper dignissim. 
-                        Mauris ultrices eros in cursus turpis massa tincidunt dui.
+            <div class="row_mw">
+                
+                <div class="col_text_mw">
+                    <h2>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h2>
+                    <p class="desc_mw">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Duis aute irure dolor in reprehenderit
                     </p>
-                </li>
-                <li>
-                    <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. 
-                        Faucibus pulvinar elementum integer enim. 
-                        Sem nulla pharetra diam sit amet nisl suscipit. 
-                        Rutrum tellus pellentesque eu tincidunt. 
-                        Lectus urna duis convallis convallis tellus. 
-                        Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                </li>
-            </ol>
+
+                    <div class="accordion_list_mw">
+                        
+                        <div class="accordion_item_mw">
+                            <input type="checkbox" name="accordion" id="acc1" checked>
+                            
+                            <label for="acc1" class="accordion_header_mw">
+                                <span>01</span> Non consectetur a erat nam at lectus urna duis?
+                                <i class="arrow_mw"></i>
+                            </label>
+                            
+                            <div class="accordion_body_mw">
+                                <p>
+                                    Feugiat pretium nibh ipsum consequat. 
+                                    Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. 
+                                    Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item_mw">
+                            <input type="checkbox" name="accordion" id="acc2">
+                            <label for="acc2" class="accordion_header_mw">
+                                <span>02</span> Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                <i class="arrow_mw"></i>
+                            </label>
+                            <div class="accordion_body_mw">
+                                <p>
+                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. 
+                                    Id interdum velit laoreet id donec ultrices. 
+                                    Fringilla phasellus faucibus scelerisque eleifend donec pretium.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item_mw">
+                            <input type="checkbox" name="accordion" id="acc3">
+                            <label for="acc3" class="accordion_header_mw">
+                                <span>03</span> Dolor sit amet consectetur adipiscing elit pellentesque?
+                                <i class="arrow_mw"></i>
+                            </label>
+                            <div class="accordion_body_mw">
+                                <p>
+                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. 
+                                    Faucibus pulvinar elementum integer enim. 
+                                    Sem nulla pharetra diam sit amet nisl suscipit.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col_img_mw">
+                    <img src="images_mw/why-us.png" class="img-fluid" alt="Why Us Image">
+                </div>
+
+            </div>
         </div>
 
         <div class="AboutUs_3_mw">
-            <h2>Voluptatem dignissimos provident quasi corporis voluptas</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="graph_mw">
-
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">100%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 100%;"></div>
-                    </div>
+            <div class="row_mw">
+                
+                <div class="col_img_mw">
+                    <img src="images_mw/illustration-10.png" class="img_fluid_mw" alt="Skills Illustration">
                 </div>
 
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">90%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 90%;"></div>
-                    </div>
-                </div>
+                <div class="col_content_mw">
+                    <h2>Voluptatem dignissimos provident quasi corporis voluptas</h2>
+                    <p class="desc_mw">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    
+                    <div class="graph_mw">
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">HTML <i class="val_mw">100%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 100%;"></div>
+                            </div>
+                        </div>
 
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">75%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 75%;"></div>
-                    </div>
-                </div>
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">CSS <i class="val_mw">90%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 90%;"></div>
+                            </div>
+                        </div>
 
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">55%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 55%;"></div>
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">JavaScript <i class="val_mw">75%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">Photoshop <i class="val_mw">55%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 55%;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -255,7 +308,111 @@
     </section>
 
     <section id="services" class="services-section">
+        <div class="section-title_cr">
+            <h2>SERVICES</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <div class="service-cards_cr">
+            <a href="#" class="service-card_cr">
+                <i class="bi bi-activity"></i>
+                <h3>Lorem Ipsum</h3>
+                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </a>
+
+            <a href="#" class="service-card_cr">
+                <i class="bi bi-bounding-box-circles"></i>
+                <h3>Sed ut perspici</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </a>
+
+            <a href="#" class="service-card_cr">
+                <i class="bi bi-calendar4-week"></i>
+                <h3>Magni Dolores</h3>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </a>
+
+            <a href="#" class="service-card_cr">
+                <i class="bi bi-broadcast"></i>
+                <h3>Nemo Enim</h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </a>
+        </div>
     </section>
+
+<!-- ================= WORK PROCESS ================= -->
+    <section id="workprocess" class="workprocess-section">
+        <div class="section-title_cr">
+            <h2>WORK PROCESS</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <div class="process-cards_cr">
+            <div class="process-card_cr">
+                <div class="img-box_cr">
+                    <img src="images_cr/process-1.webp" alt="process1">
+                </div>
+                <span class="step_cr">01</span>
+                <h3>Research & Analysis</h3>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> Market Research</li>
+                    <li><i class="bi bi-check-circle"></i> Data Analysis</li>
+                    <li><i class="bi bi-check-circle"></i> User Feedback</li>
+                </ul>
+            </div>
+
+            <div class="process-card_cr">
+                <div class="img-box_cr">
+                    <img src="images_cr/process-2.webp" alt="process2">
+                </div>
+                <span class="step_cr">02</span>
+                <h3>Design & Planning</h3>
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit</p>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> Wireframing</li>
+                    <li><i class="bi bi-check-circle"></i> UI/UX Design</li>
+                    <li><i class="bi bi-check-circle"></i> Prototyping</li>
+                </ul>
+            </div>
+
+            <div class="process-card_cr">
+                <div class="img-box_cr">
+                    <img src="images_cr/process-3.webp" alt="process3">
+                </div>
+                <span class="step_cr">03</span>
+                <h3>Development & Launch</h3>
+                <p>Et harum quidem rerum facilis est et expedita distinctio</p>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> Development</li>
+                    <li><i class="bi bi-check-circle"></i> Testing</li>
+                    <li><i class="bi bi-check-circle"></i> Deployment</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+        <div class="cta-overlay_cr"></div>
+
+        
+        <div class="cta-container_cr">
+            <div class="cta-text_cr">
+                <h3>Call To Action</h3>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div class="cta-btn_cr">
+                <a href="#" class="cta-button_cr">Call To Action</a>
+            </div>
+        </div>
+        
+    </section>
+
 
     <section id="portfolio" class="portfolio-section">
         <div class="portfolioTitle_hs">
@@ -290,12 +447,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -308,12 +461,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -326,12 +475,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -344,12 +489,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -362,12 +503,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -380,12 +517,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -398,12 +531,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -416,12 +545,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in" alt="확대 보기"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg" alt="디테일 보기"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -434,12 +559,8 @@
                                     <p>Lorem ipsum, dolor sit</p>
                                 </div>
                                 <div class="button">
-                                    <span class="readingGlasses_hs">
-                                        <a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a>
-                                    </span>
-                                    <span class="chain_hs">
-                                        <a href="#" class="imgInDetail_hs" aria-label="링크"></a>
-                                    </span>
+                                    <i class="bi bi-zoom-in"><a href="#" class="imgEnlarge_hs" aria-label="이미지 확대"></a></i>
+                                    <i class="bi bi-link-45deg"><a href="#" class="imgInDetail_hs" aria-label="링크"></a></i>
                                 </div>
                             </div>
                         </div>
@@ -470,10 +591,10 @@
                     <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                     
                     <div class="social_cr">
-                        <a href="#">X</a>
-                        <a href="#">F</a>
-                        <a href="#">I</a>
-                        <a href="#">in</a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -490,10 +611,10 @@
                     <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                     
                     <div class="social_cr">
-                        <a href="#">X</a>
-                        <a href="#">F</a>
-                        <a href="#">I</a>
-                        <a href="#">in</a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -510,10 +631,10 @@
                     <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                     
                     <div class="social_cr">
-                        <a href="#">X</a>
-                        <a href="#">F</a>
-                        <a href="#">I</a>
-                        <a href="#">in</a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -530,10 +651,10 @@
                     <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                     
                     <div class="social_cr">
-                        <a href="#">X</a>
-                        <a href="#">F</a>
-                        <a href="#">I</a>
-                        <a href="#">in</a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -661,19 +782,359 @@
                 </div>
             </div>
         </div>
-        <div class="section_testimonials_sy">
-            <div class="container_title_sy"></div>
+        <div class="section_testimonials_sy"> <!--testimonial=--------------------------------->
+            <div class="container_title_sy">
+                <h2>TESTIMONIALS</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
             <div class="container_content_sy">
+                <div class="swiper_sy"> <!--고정된 틀, 창문 할-->
+                    <div class="slide_sy"><!--전체 한 줄짜리 -->
+
+                        <div class="tm_item_sy"><!--한명당-->
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/person/person-m-9.webp" alt="" class="tm_img_sy">
+                            <h3><span>Saul Goodman</span></h3>
+                            <h4><span>Ceo & Founder</span></h4>
+                            <div class="stars_sy"></div>
+                            <p class="tm_content_sy">
+                                <i class="bi bi-quote quote_sy"></i><span> Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                </span><i class="bi bi-quote quote_sy"></i>
+                            </p>
+                        </div>
+
+                        <div class="tm_item_sy"><!--한명당-->
+                        
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/person/person-f-12.webp" alt="" class="tm_img_sy">
+                            <h3><span>Jena Karlis</span></h3>
+                            <h4><span>Store Owner</span></h4>
+                            <div class="stars_sy"></div>
+                            <p class="tm_content_sy">
+                                <i class="bi bi-quote quote_sy"></i><span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span><i class="bi bi-quote quote_sy"></i>
+                            </p>
+                        </div>
+                        <div class="tm_item_sy"><!--한명당-->
+                            
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/person/person-f-5.webp" alt="" class="tm_img_sy">
+                            <h3><span>Sara Wilson</span></h3>
+                            <h4><span>Designer</span></h4>
+                            <div class="stars_sy"></div>
+                            <p class="tm_content_sy">
+                                <i class="bi bi-quote quote_sy"></i><span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                </span><i class="bi bi-quote quote_sy"></i>
+                            </p>
+                        </div>
+                        <div class="tm_item_sy"><!--한명당-->
+                            
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/person/person-m-12.webp" alt="" class="tm_img_sy">
+                            <h3><span>Matt Brandon</span></h3>
+                            <h4><span>Freelancer</span></h4>
+                            <div class="stars_sy">
+                            </div>
+                            <p class="tm_content_sy">
+                                <i class="bi bi-quote quote_sy"></i><span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                                </span><i class="bi bi-quote quote_sy"></i>
+                            </p>
+                        </div>
+                        <div class="tm_item_sy"><!--한명당-->
+                            
+                            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/person/person-m-13.webp" alt="" class="tm_img_sy">
+                            <h3><span>John Larson</span></h3>
+                            <h4><span>Freelancer</span></h4>
+                            <div class="stars_sy">
+                            </div>
+                            <p class="tm_content_sy">
+                                <i class="bi bi-quote quote_sy"></i><span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                </span><i class="bi bi-quote quote_sy"></i>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="swiper_pagination_sy">
+                        <div class="pagination_sy"></div>
+                        <div class="pagination_sy"></div>
+                        <div class="pagination_sy"></div>
+                        <div class="pagination_sy"></div>
+                        <div class="pagination_sy"></div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="section_faq_sy"><!--faq-------------------------------->
+            <div class="container_title_sy">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+            <div class="container_content_sy"><!--전체 함 1100으로 설정-->
+                <div class="faq_container_sy">
+
+                
+                    <details class="faq_item_sy"><!--각 아이템-->
+                        <summary class= "faq_header_sy">
+                            <span class="faq_icon_sy">?</span>
+                            <span class="faq_title_sy">Non consectetur a erat nam at lectus urna duis?</span>
+                            <span class="toggle_sy"></span>
+                        </summary>
+                            <div class="faq_content_sy">
+                                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            </div>
+                    </details>
+                    <details class="faq_item_sy"><!--각 아이템22222-->
+                        <summary class= "faq_header_sy">
+                            <span class="faq_icon_sy">?</span>
+                            <span class="faq_title_sy">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                            </span>
+                            <span class="toggle_sy"></span>
+                        </summary>
+                            <div class="faq_content_sy">
+                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.                            
+                            </div>
+                    </details>
+
+                    <details class="faq_item_sy"><!--각 아이템333333-->
+                        <summary class= "faq_header_sy">
+                            <span class="faq_icon_sy">?</span>
+                            <span class="faq_title_sy">Dolor sit amet consectetur adipiscing elit pellentesque?</span>
+                            <span class="toggle_sy"></span>
+                        </summary>
+                            <div class="faq_content_sy">
+                                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                            </div>
+                    </details>
+                    <details class="faq_item_sy"><!--각 아이템44444-->
+                        <summary class= "faq_header_sy">
+                            <span class="faq_icon_sy">?</span>
+                            <span class="faq_title_sy">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                            </span>
+                            <span class="toggle_sy"></span>
+                        </summary>
+                            <div class="faq_content_sy">
+                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                            </div>
+                    </details>
+                    <details class="faq_item_sy"><!--각 아이템-->
+                        <summary class= "faq_header_sy">
+                            <span class="faq_icon_sy">?</span>
+                            <span class="faq_title_sy">Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                            </span>
+                            <span class="toggle_sy"></span>
+                        </summary>
+                            <div class="faq_content_sy">
+                                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in                            </div>
+                    </details>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="section_subscribe_sy">
+            <input type="checkbox" id="error_toggle_sy">
+            <div class="container_content_sy">
+
+                <div class="row_container_sy">
+                    <div class="subscribe_row1_sy">
+                        <h2>Subscribe to our <br>newsletter</h2>
+                        <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit.</p>
+                        <div class="all_box_sy">
+                            <div class="input_box_sy">
+                                <input type="email" class="email_sy" placeholder="Email address...">
+                            <label for="error_toggle_sy" class= "subscribe_btn_sy">Subscribe</label>
+                            </div>
+                            <div class="error_box_sy">
+                                Error:403<br>
+                                https://bootstrapmade.com/content/demo/Arsha/forms/newsletter.php
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="subscribe_row2_sy"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </section> <!--pricing 끝나는 부분----------------------------->
+
+    <section id="blog" class="blog-section">
+        <div class="blog-container_cr">
+
+            <div class="blog-header_cr">
+                <h2>RECENT BLOG POSTS</h2>
+                <div class="blog-bar_cr"></div>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
+
+            <div class="blog-cards_cr">
+
+                <!-- card 1 -->
+                <a href="#" class="blog-card_cr">
+                    <div class="blog-img-wrap_cr">
+                        <img src="images_cr/blog-1.webp" alt="blog image">
+                        <span class="blog-date_cr">DECEMBER 12</span>
+                    </div>
+
+                    <div class="blog-content_cr">
+                        <h3>Eum ad dolor et. Autem aut fugiat debitis</h3>
+
+                        <div class="blog-meta_cr">
+                            <span><i class="bi bi-person"></i> Julia Parker</span>
+                            <span class="slash_cr">/</span>
+                            <span><i class="bi bi-folder2"></i> Politics</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="read-more_cr">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- card 2 -->
+                <a href="#" class="blog-card_cr">
+                    <div class="blog-img-wrap_cr">
+                        <img src="images_cr/blog-2.webp" alt="blog image">
+                        <span class="blog-date_cr">JULY 17</span>
+                    </div>
+
+                    <div class="blog-content_cr">
+                        <h3>Et repellendus molestiae qui est sed omnis</h3>
+
+                        <div class="blog-meta_cr">
+                            <span><i class="bi bi-person"></i> Mario Douglas</span>
+                            <span class="slash_cr">/</span>
+                            <span><i class="bi bi-folder2"></i> Sports</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="read-more_cr">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- card 3 -->
+                <a href="#" class="blog-card_cr">
+                    <div class="blog-img-wrap_cr">
+                        <img src="images_cr/blog-3.webp" alt="blog image">
+                        <span class="blog-date_cr">SEPTEMBER 05</span>
+                    </div>
+
+                    <div class="blog-content_cr">
+                        <h3>Quia assumenda est et veritati tirana ploder</h3>
+
+                        <div class="blog-meta_cr">
+                            <span><i class="bi bi-person"></i> Lisa Hunter</span>
+                            <span class="slash_cr">/</span>
+                            <span><i class="bi bi-folder2"></i> Economics</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="read-more_cr">
+                            Read More <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            
             </div>
         </div>
     </section>
 
-    <section id="blog" class="blog-section">
-    </section>
 
     <section id="contact" class="contact-section">
-        <h2>CONTACT</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <div class="container_mw">
+            <div class="contact_title_mw">
+                <h2>CONTACT</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
+
+            <div class="row_content_mw">
+                <div class="col_info_mw">
+                    <div class="info_item_mw">
+                        <div class="icon_box_mw">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="info_text_mw">
+                            <h4><strong>Address</strong></h4>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
+                    </div>
+
+                    <div class="info_item_mw">
+                        <div class="icon_box_mw">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <div class="info_text_mw">
+                            <h4><strong>Call Us</strong></h4>
+                            <p>+1 5589 55488 55</p>
+                        </div>
+                    </div>
+
+                    <div class="info_item_mw">
+                        <div class="icon_box_mw">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="info_text_mw">
+                            <h4><strong>Email Us</strong></h4>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="googlemap_mw">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d193559.13256472183!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown.%20Conference%20Center!5e0!3m2!1sen!2sus!4v1766979523316!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="col_form_mw">
+                    <form action="#" method="post">
+                        <div class="form_row_mw">
+                            <div class="form_group_mw">
+                                <label for="name_mw">Your Name</label>
+                                <input type="text" name="name_mw" id="name_mw" class="form_control_mw" required>
+                            </div>
+
+                            <div class="form_group_mw">
+                                <label for="email_mw">Your Email</label>
+                                <input type="email" name="email_mw" id="email_mw" class="form_control_mw" required>
+                            </div>
+                        </div>
+
+                        <div class="form_group_mw">
+                            <label for="subject_mw">Subject</label>
+                            <input type="text" name="subject_mw" id="subject_mw" class="form_control_mw" required>
+                        </div>
+                        
+                        <div class="form_group_mw">
+                                <label for="message_mw">Message</label>
+                                <textarea class="form_control_mw" name="message_mw" id="message_mw" rows="20" required></textarea>
+                        </div>
+                        <div class="text_center_mw">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer id="footer_ny">
