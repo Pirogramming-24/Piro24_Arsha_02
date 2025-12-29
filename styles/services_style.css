@@ -267,28 +267,59 @@
 }
 
 /* ================= 반응형 ================= */
-@media (max-width: 1024px) {
+
+/* ---------- 1200px 미만 ---------- */
+@media (max-width: 1199px) {
+
+  /* SERVICES */
   .service-cards_cr {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* WORK PROCESS (유지) */
+  .process-cards_cr {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section {
+    padding: 90px 6%;
+  }
+}
+
+
+/* ---------- 992px 미만 ---------- */
+@media (max-width: 991px) {
+
+  /* SERVICES */
+  .service-card_cr {
+    padding: 30px 24px;
+  }
+
+  /* WORK PROCESS → 세로 */
   .process-cards_cr {
     grid-template-columns: 1fr;
   }
+
+  .process-card_cr {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
-@media (max-width: 600px) {
+
+/* ---------- 768px 미만 ---------- */
+@media (max-width: 767px) {
+
   section {
-    padding: 60px 5%;
+    padding: 70px 5%;
   }
 
+  /* SERVICES → 1열 */
   .service-cards_cr {
     grid-template-columns: 1fr;
   }
-}
 
-/* ================= CTA 반응형 ================= */
-@media (max-width: 768px) {
+  /* CTA */
   .cta-container_cr {
     flex-direction: column;
     text-align: center;
@@ -296,5 +327,33 @@
 
   .cta-btn_cr {
     margin-top: 30px;
+  }
+}
+
+
+/* ---------- 576px 미만 ---------- */
+@media (max-width: 575px) {
+
+  section {
+    padding: 60px 5%;
+  }
+
+  /* SERVICES */
+  .service-card_cr {
+    padding: 24px 20px;
+  }
+
+  /* WORK PROCESS */
+  .process-card_cr {
+    padding: 32px 20px;
+  }
+
+  /* CTA */
+  .cta-title_cr {
+    font-size: 1.5rem;
+  }
+
+  .cta-desc_cr {
+    font-size: 0.95rem;
   }
 }
