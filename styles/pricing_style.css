@@ -1,13 +1,23 @@
+body{
+    height:100vh;
+}
+
+
+
 .section_pricing_sy{
     background: #f5f6f8;
     padding-bottom: 50px;
 }
 .container_title_sy{
     color: #37517E;
-    font: 30px 'jost'; font-weight: 1000;
+    font: 30px 'jost'; font-weight: 900;
     padding-bottom:20px;
     margin: 0 auto; margin-bottom:20px; max-width:1320px;
     text-align: center;
+
+    
+    
+    
 }
 .container_title_sy h2{
     position:relative; padding-top: 50px; padding-bottom: 20px;
@@ -445,6 +455,11 @@
     background-image: url(https://bootstrapmade.com/content/demo/Arsha/assets/img/cta/cta-1.webp);
     background-position: center;
 }
+
+
+/*스크롤-------------------------------------*/
+
+
 
 
 
