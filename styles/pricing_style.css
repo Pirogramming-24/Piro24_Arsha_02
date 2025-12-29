@@ -1,12 +1,23 @@
+body{
+    height:100vh;
+}
+
+
+
 .section_pricing_sy{
     background: #f5f6f8;
     padding-bottom: 50px;
 }
 .container_title_sy{
     color: #37517E;
-    font: 21px 'jost';
-    margin-bottom:20px; padding-bottom:20px;
+    font: 30px 'jost'; font-weight: 900;
+    padding-bottom:20px;
+    margin: 0 auto; margin-bottom:20px; max-width:1320px;
     text-align: center;
+
+    
+    
+    
 }
 .container_title_sy h2{
     position:relative; padding-top: 50px; padding-bottom: 20px;
@@ -31,11 +42,12 @@
 .container_title_sy p{
     color:#444444; 
     font: 17px 'Open Sans';
+    padding:20px;
 }
 
 .container_content_sy{
-    background: #f5f6f8;
     text-align: center; width:100%;
+    max-width:1320px; margin:0 auto;
 }
 .row_item_sy{
     display:flex; flex-wrap:wrap; justify-content:center;
@@ -126,6 +138,338 @@
     background-color: #47b2e4;
     color:white;
 }
+/*faq---------------------*/
+.section_faq_sy{
+    background: #f5f6f8;
+}
+.faq_container_sy{
+    margin:0 auto;
+    max-width:760px; 
+    padding-bottom: 30px;
+}
+.faq_item_sy{
+    margin:20px auto;
+    background-color: white;
+    box-shadow:0 6px 16px rgba(0,0,0,.06);
+    overflow: hidden; padding:10px;
+    flex: 0 1;align-items: center;
+}
+.faq_item_sy summary{list-style: none;}
+.faq_item_sy summary::-webkit-details-marker{
+    display:none;
+}
+.faq_header_sy{
+    display:flex; align-items: center;
+    justify-content:between;
+    cursor:pointer; padding:10px 10px;
+}
+.faq_title_sy{
+    flex:1; text-align: left; padding-left: 10px;
+    color:#37517E;
+    font:19px 'Jost'; font-weight: 600;
+}
+
+.faq_icon_sy{
+    pointer-events: none;
+    width: 22px; height: 22px;
+    display:inline-grid;
+    place-items:center;
+    border-radius: 50%;
+    border: 2px solid #22c5f7;
+    color:#22c5f7;
+    font-weight: 800;
+    font-size: 12px;
+}
+.choose_sy{
+    background-color: green; 
+    cursor: pointer;
+    display: flex; align-items: center;
+}
+.toggle_sy{
+    width: 10px; height: 10px;
+    border-right: 2px solid #7aa1c7;
+    border-bottom: 2px solid #7aa1c7;
+    transform: rotate(-45deg);
+    transition: transform .2s ease;
+}
+.faq_item_sy[open] .toggle_sy{
+    transform: rotate(45deg);
+    transition: transform .2s ease;
+
+}
+.faq_item_sy[open] .faq_title_sy{
+    color:#47B2E4;
+}
+
+.faq_content_sy{
+    padding: 0; margin:0 auto;
+    color:#3f4a59;
+    line-height: 1.6;
+} 
+
+/*testimonials------------*/
+.section_testimonials_sy .container_title_sy, .section_testimonials_sy .container_content_sy{
+    background: white;
+    padding:30px;
+}
+
+.swiper_sy{ /*고정틀 창문*/
+    width:800px; margin:0 auto; overflow:hidden;
+    padding:10px 0;
+}
+.slide_sy{
+    display:flex; align-items: center; width:500%;
+    animation: slidemove_sy 16.5s linear infinite;
+}
+
+@keyframes slidemove_sy {
+    /* 1 */
+  0%      { transform: translateX(0%); }
+  18.18%  { transform: translateX(0%); }
+  20%     { transform: translateX(-20%); }
+
+  /* 2 */
+  38.18%  { transform: translateX(-20%); }
+  40%     { transform: translateX(-40%); }
+
+  /* 3 */
+  58.18%  { transform: translateX(-40%); }
+  60%     { transform: translateX(-60%); }
+
+  /* 4 */
+  78.18%  { transform: translateX(-60%); }
+  80%     { transform: translateX(-80%); }
+
+  /* 5 */
+  98.18%  { transform: translateX(-80%); }
+  100%    { transform: translateX(0%); } 
+}
+.tm_item_sy{
+    width:20%; flex: 0 0 20%;
+    display:block; text-align: center;
+    
+
+}
+.tm_img_sy{
+    width:100px; height:100px;
+    justify-content: center;
+    margin:30px;
+    object-fit:cover; /* 찌그러짐 방지 */
+    border-radius:50%;
+}
+
+.tm_item_sy h3 span{
+    font: 20px 'Jost'; color:#37517E; font-weight: 900;
+    margin:5px; height:30px;
+    display:block;
+
+}
+.tm_item_sy h4 span{
+    font:14px 'Jost'; color:#8b8b8b; font-weight:500;
+    display:block; 
+    margin:0px auto; margin-bottom:23px; 
+
+}
+.stars_sy{
+    display: block; 
+    align-items:center; display:flex; justify-content: center;
+    width:90px; height:17px; padding:10px 0; margin:10px auto;
+    background-image: url(https://www.freeiconspng.com/uploads/yellow-christmas-star-png-18.png);
+    background-size:18px 19px; 
+}
+
+
+
+.tm_content_sy{
+    margin: 0 auto; padding:20px;
+    font:15px 'Open Sans';
+    font-style: italic; font-weight: 600;
+    color:#5e5e5e;
+    position:relative; line-height: 1.8;
+    text-align: center;
+    
+}
+.tm_content_sy span{
+    padding:0 30px;
+    margin:10px 10px;
+}
+.quote_sy{
+    position:absolute;
+    color:#47B2E4;
+    font-size: 28px; opacity:0.6;
+    font-family:'bootstrap-icons';
+}
+
+
+.tm_content_sy .quote_sy:first-of-type{
+    left:30px; top:0px;
+
+}
+.tm_content_sy .quote_sy:last-of-type{
+    right:30px; bottom:0px;
+    transform:rotate(180deg);
+}
+
+.swiper_pagination_sy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+
+}
+.pagination_sy{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+/*밑에 pagination 점 --------------------------*/
+/* 1번 점 */
+.swiper_pagination_sy .pagination_sy:nth-child(1){
+  animation: dot1 16.5s infinite;
+}
+/* 2번 점 */
+.swiper_pagination_sy .pagination_sy:nth-child(2){
+  animation: dot2 16.5s infinite;
+}
+/* 3번 점 */
+.swiper_pagination_sy .pagination_sy:nth-child(3){
+  animation: dot3 16.5s infinite;
+}
+/* 4번 점 */
+.swiper_pagination_sy .pagination_sy:nth-child(4){
+  animation: dot4 16.5s infinite;
+}
+/* 5번 점 */
+.swiper_pagination_sy .pagination_sy:nth-child(5){
+  animation: dot5 16.5s infinite;
+}
+
+/* 공통: 파란색(활성) */
+@keyframes dot1{
+  0%, 18.18%   { background:#47b2e4; }
+  20%, 100%    { background:#ddd; }
+}
+@keyframes dot2{
+  0%, 18.18%   { background:#ddd; }
+  20%, 38.18%  { background:#47b2e4; }
+  40%, 100%    { background:#ddd; }
+}
+@keyframes dot3{
+  0%, 38.18%   { background:#ddd; }
+  40%, 58.18%  { background:#47b2e4; }
+  60%, 100%    { background:#ddd; }
+}
+@keyframes dot4{
+  0%, 58.18%   { background:#ddd; }
+  60%, 78.18%  { background:#47b2e4; }
+  80%, 100%    { background:#ddd; }
+}
+@keyframes dot5{
+  0%, 78.18%   { background:#ddd; }
+  80%, 98.18%  { background:#47b2e4; }
+  100%         { background:#ddd; }
+}
+
+/*subscribe--------------------------------*/
+.section_subscribe_sy .container_content_sy{
+    background-color: #f5f6f8;
+    min-height:380px; width:960px;
+    padding:60px; padding-bottom: 0;
+    margin:70px auto; 
+    border-radius: 40px;
+    
+}
+.row_container_sy{
+    max-width:800px; height:100%;
+    margin: 0 auto; 
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.subscribe_row1_sy{
+    flex:1; min-width:0;
+    width:400px; height:auto;
+}
+.subscribe_row1_sy h2{
+    font: 40px 'Jost'; font-weight:1000;
+    color:#37517E;
+    text-align: left; line-height: 1.3;
+    padding-bottom:20px;
+
+}
+
+.subscribe_row1_sy p{
+    font:18px 'Open Sans';
+    text-align:justify;
+    width:390px;
+    padding:0; padding-bottom:30px;
+    letter-spacing: -0.02em; line-height:1.4;
+
+}
+.all_box_sy{
+    width:400px;
+}
+#error_toggle_sy{
+    display:none;
+}
+#error_toggle_sy:checked ~ .container_content_sy .error_box_sy{
+    display: block;
+}
+#error_toggle_sy:checked ~ .container_content_sy{
+    height:440px;
+    padding-bottom: 30px;
+}
+.input_box_sy{
+    display:flex; width:100%; height:50px;
+    border: 1px solid#47b2e4;
+    border-radius: 30px; overflow: hidden;
+
+}
+.input_box_sy input{
+    flex:1; border: none; outline:none;
+}
+.email_sy{
+    padding:0 30px;
+}
+.subscribe_btn_sy{
+    background: #47B2E4; color:#fff; padding:0 35px;
+    cursor: pointer; 
+    font:17px 'Open Sans'; font-weight:600;
+    display:flex; align-items: center; justify-content: center;
+}
+.error_box_sy{
+    display:none; width:100%;
+    background-color: rgb(214, 24, 24); color:#fff;
+    padding:15px 18px; margin-top:15px;
+    font-weight: 600; font-size:17px; line-height: 1.4;
+    text-align: left;
+}
+.subscribe_row2_sy{    
+    align-items:center; display:block; justify-content: center;
+    flex: 0 0 268px;
+    width:250px; height:350px; padding:0; margin:0;
+    background-size:cover;
+    background-image: url(https://bootstrapmade.com/content/demo/Arsha/assets/img/cta/cta-1.webp);
+    background-position: center;
+}
+
+
+/*스크롤-------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*반응형-----------------------*/
 
 @media(max-width:1200px){
     .row_item_sy{
