@@ -5,7 +5,7 @@
 
 .container_mw {
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1300px; 
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -15,15 +15,40 @@
     text-align: center;
     margin-bottom: 40px;
 }
+
 .contact_title_mw h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #37517e;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    color: #37517e;       
+    
+    position: relative;   
+    padding-bottom: 20px; 
+    margin-bottom: 20px;  
 }
-.contact_title_mw p {
-    color: #848484;
+
+.contact_title_mw h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;         
+    height: 1px;          
+    background: #ddd;    
+    bottom: 1px;          
+    left: 50%;            
+    transform: translateX(-50%); 
+}
+
+.contact_title_mw h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;          
+    height: 3px;          
+    background: #47b2e4;  
+    bottom: 0;            
+    left: 50%;            
+    transform: translateX(-50%); 
 }
 
 .row_content_mw {
@@ -34,8 +59,8 @@
 
 
 .col_info_mw {
-    flex: 0 0 35%;       
-    max-width: 35%;
+    flex: 0 0 42%;       
+    max-width: 42%;
     
     background: #fff;
     padding: 20px 30px;
@@ -81,16 +106,27 @@
     margin: 0;
 }
 
-
 .googlemap_mw {
     width: 100%;
-    border-radius: 4px;
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
     overflow: hidden;
+    border-radius: 4px;
+}
+
+.googlemap_mw iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
 }
 
 .col_form_mw {
-    flex: 0 0 63%;       
-    max-width: 63%;
+    flex: 0 0 56%;       
+    max-width: 56%;
     
     background: #fff;
     padding: 20px 30px;
@@ -156,4 +192,25 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact_title_mw,         
+.info_item_mw,             
+.col_form_mw,              
+.googlemap_mw              
+{
+    animation: fadeInUp linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
 }
