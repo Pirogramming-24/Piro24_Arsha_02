@@ -37,7 +37,7 @@ body{
 {
     animation: scroll_down linear;
     animation-timeline: scroll();
-    animation-range: 10% 17%;
+    animation-range: 10% 17%; /*병합 후 30% 37% 추정*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -47,7 +47,7 @@ body{
     margin-bottom: 20px;
     animation: scroll_down linear;
     animation-timeline: scroll();
-    animation-range: 13% 20%;
+    animation-range: 13% 20%; /*병합 후 33% 40% 추정*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -55,7 +55,7 @@ body{
 .movingImg_hs {
     animation: scroll_down linear;
     animation-timeline: scroll();
-    animation-range: 16% 23%;
+    animation-range: 16% 23%; /*병합 후 36% 43% 추정*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
