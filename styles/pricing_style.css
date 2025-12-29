@@ -376,7 +376,7 @@ body{
     background: #ddd;
 }
 
-/*밑에 pagination 점 --------------------------*/
+/*밑에 pagination 점 ----------------------------*/
 /* 1번 점 */
 .swiper_pagination_sy .pagination_sy:nth-child(1){
   animation: dot1 16.5s infinite;
@@ -498,7 +498,7 @@ body{
 }
 .error_box_sy{
     display:none; width:100%;
-    background-color: rgb(214, 24, 24); color:#fff;
+    background-color: rgb(209, 29, 29); color:#fff;
     padding:15px 18px; margin-top:15px;
     font-weight: 600; font-size:17px; line-height: 1.4;
     text-align: left;
