@@ -1,4 +1,16 @@
 /* ===== TEAM SECTION ===== */
+/*애니메이션*/
+@keyframes scroll_down_cr {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #team {
   padding: 60px 0;
   background-color: #ffffff;
@@ -8,6 +20,12 @@
   padding: 0 12px 60px;
   margin: 0 40px;
   text-align: center;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 48% 51%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
+  animation-fill-mode: forwards;
 }
 
 .team-header_cr h2 {
@@ -76,6 +94,11 @@
   gap: 20px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 49% 52%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
 }
 
 /*hover기능!!!!!*/
