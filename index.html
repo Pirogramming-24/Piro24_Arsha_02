@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="styles/team_style.css">
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/pricing_style.css">
+    <link rel="stylesheet" href="styles/about_style.css">
+    <link rel="stylesheet" href="styles/contact_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -151,7 +153,7 @@
     </section>
 
     <section id="about" class="about-section">
-      <div class="AboutUs_1_mw">
+        <div class="AboutUs_1_mw">
             <h2>ABOUT US</h2>
 
             <div class="AboutUs_content_mw">
@@ -159,9 +161,14 @@
                 <div class="left_about_mw">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <ul>
-                        <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
                         <li>
+                            <i class="bi bi-check2-circle"></i>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
+                            Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
                             Ullamco laboris nisi ut aliquip ex ea commodo
                         </li>
                     </ul>
@@ -177,76 +184,116 @@
             </div> <!-- 첫번째 aboutus 내용부분-->
         </div>
             
-
         <div class="AboutUs_2_mw">
-            <h2>Eum ipsam laborum deleniti velit pariatur architecto aut nihil</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Duis aute irure dolor in reprehenderit
-            </p>
-            <ol>
-                <li>
-                    <h3>
-                        Non consectetur a erat nam at lectus urna duis?
-                    </h3>
-                    <p>Feugiat pretium nibh ipsum consequat. 
-                        Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. 
-                        Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </li>
-                <li>
-                    <h3>
-                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                    </h3>
-                    <p>
-                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. 
-                        Id interdum velit laoreet id donec ultrices. 
-                        Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-                        Est pellentesque elit ullamcorper dignissim. 
-                        Mauris ultrices eros in cursus turpis massa tincidunt dui.
+            <div class="row_mw">
+                
+                <div class="col_text_mw">
+                    <h2>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h2>
+                    <p class="desc_mw">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Duis aute irure dolor in reprehenderit
                     </p>
-                </li>
-                <li>
-                    <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                    <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. 
-                        Faucibus pulvinar elementum integer enim. 
-                        Sem nulla pharetra diam sit amet nisl suscipit. 
-                        Rutrum tellus pellentesque eu tincidunt. 
-                        Lectus urna duis convallis convallis tellus. 
-                        Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                </li>
-            </ol>
+
+                    <div class="accordion_list_mw">
+                        
+                        <div class="accordion_item_mw">
+                            <input type="checkbox" name="accordion" id="acc1" checked>
+                            
+                            <label for="acc1" class="accordion_header_mw">
+                                <span>01</span> Non consectetur a erat nam at lectus urna duis?
+                                <i class="arrow_mw"></i>
+                            </label>
+                            
+                            <div class="accordion_body_mw">
+                                <p>
+                                    Feugiat pretium nibh ipsum consequat. 
+                                    Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. 
+                                    Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item_mw">
+                            <input type="checkbox" name="accordion" id="acc2">
+                            <label for="acc2" class="accordion_header_mw">
+                                <span>02</span> Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                <i class="arrow_mw"></i>
+                            </label>
+                            <div class="accordion_body_mw">
+                                <p>
+                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. 
+                                    Id interdum velit laoreet id donec ultrices. 
+                                    Fringilla phasellus faucibus scelerisque eleifend donec pretium.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion_item_mw">
+                            <input type="checkbox" name="accordion" id="acc3">
+                            <label for="acc3" class="accordion_header_mw">
+                                <span>03</span> Dolor sit amet consectetur adipiscing elit pellentesque?
+                                <i class="arrow_mw"></i>
+                            </label>
+                            <div class="accordion_body_mw">
+                                <p>
+                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. 
+                                    Faucibus pulvinar elementum integer enim. 
+                                    Sem nulla pharetra diam sit amet nisl suscipit.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col_img_mw">
+                    <img src="images_mw/why-us.png" class="img-fluid" alt="Why Us Image">
+                </div>
+
+            </div>
         </div>
 
         <div class="AboutUs_3_mw">
-            <h2>Voluptatem dignissimos provident quasi corporis voluptas</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="graph_mw">
-
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">100%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 100%;"></div>
-                    </div>
+            <div class="row_mw">
+                
+                <div class="col_img_mw">
+                    <img src="images_mw/illustration-10.png" class="img_fluid_mw" alt="Skills Illustration">
                 </div>
 
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">90%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 90%;"></div>
-                    </div>
-                </div>
+                <div class="col_content_mw">
+                    <h2>Voluptatem dignissimos provident quasi corporis voluptas</h2>
+                    <p class="desc_mw">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    
+                    <div class="graph_mw">
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">HTML <i class="val_mw">100%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 100%;"></div>
+                            </div>
+                        </div>
 
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">75%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 75%;"></div>
-                    </div>
-                </div>
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">CSS <i class="val_mw">90%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 90%;"></div>
+                            </div>
+                        </div>
 
-                <div class="graph_bar_mw">
-                    <span class="skill_mw">HTML <i class="val_mw">55%</i></span>
-                    <div class="bar_wrap_mw">
-                        <div class="progress_bar_mw" role="progressbar" style="width: 55%;"></div>
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">JavaScript <i class="val_mw">75%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="graph_bar_mw">
+                            <span class="skill_mw">Photoshop <i class="val_mw">55%</i></span>
+                            <div class="bar_wrap_mw">
+                                <div class="progress_bar_mw" style="width: 55%;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -672,8 +719,79 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <h2>CONTACT</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <div class="container_mw">
+            <div class="contact_title_mw">
+                <h2>CONTACT</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
+
+            <div class="row_content_mw">
+                <div class="col_info_mw">
+                    <div class="info_item_mw">
+                        <div class="icon_box_mw">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="info_text_mw">
+                            <h4><strong>Address</strong></h4>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
+                    </div>
+
+                    <div class="info_item_mw">
+                        <div class="icon_box_mw">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <div class="info_text_mw">
+                            <h4><strong>Call Us</strong></h4>
+                            <p>+1 5589 55488 55</p>
+                        </div>
+                    </div>
+
+                    <div class="info_item_mw">
+                        <div class="icon_box_mw">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="info_text_mw">
+                            <h4><strong>Email Us</strong></h4>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="googlemap_mw">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d193559.13256472183!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown.%20Conference%20Center!5e0!3m2!1sen!2sus!4v1766979523316!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="col_form_mw">
+                    <form action="#" method="post">
+                        <div class="form_row_mw">
+                            <div class="form_group_mw">
+                                <label for="name_mw">Your Name</label>
+                                <input type="text" name="name_mw" id="name_mw" class="form_control_mw" required>
+                            </div>
+
+                            <div class="form_group_mw">
+                                <label for="email_mw">Your Email</label>
+                                <input type="email" name="email_mw" id="email_mw" class="form_control_mw" required>
+                            </div>
+                        </div>
+
+                        <div class="form_group_mw">
+                            <label for="subject_mw">Subject</label>
+                            <input type="text" name="subject_mw" id="subject_mw" class="form_control_mw" required>
+                        </div>
+                        
+                        <div class="form_group_mw">
+                                <label for="message_mw">Message</label>
+                                <textarea class="form_control_mw" name="message_mw" id="message_mw" rows="20" required></textarea>
+                        </div>
+                        <div class="text_center_mw">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer id="footer_ny">
