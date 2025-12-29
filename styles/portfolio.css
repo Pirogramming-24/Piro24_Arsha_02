@@ -26,7 +26,7 @@ body{
     /* transform: translateY(80px); */
     opacity: 0;
 }
-@keyframes scroll_down {
+@keyframes scroll_down_hs {
     from {
         transform: translateY(80px); opacity: 0;
     }
