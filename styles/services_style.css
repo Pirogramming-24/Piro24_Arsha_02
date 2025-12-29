@@ -185,6 +185,87 @@
   font-size: 16px;
 }
 
+/* ================= CTA (Call To Action) ================= */
+#cta {
+  position: relative;
+  background-image: url("../images_cr/cta-bg.webp"); /* 배경 이미지 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* ⭐ 핵심: 배경 고정 (패럴랙스 느낌) */
+  background-attachment: fixed;
+
+  padding: 140px 0px;
+  color: #fff;
+
+  overflow: clip;
+}
+
+.cta-overlay_cr {
+  position: absolute;
+  inset: 0;
+  background: rgba(55, 81, 126, 0.65); /* 어두운 오버레이 */
+  z-index: 1;
+}
+
+.cta-container_cr {
+  max-width: 1320px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 40px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cta-text_cr {
+  max-width: 800px; /* 🔥 텍스트가 차지하는 영역 증가 */
+  color: #fff;
+}
+
+/* 왼쪽 텍스트 */
+.cta-text_cr h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-text_cr p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e0e0e0;
+  max-width: 650px;
+}
+
+/* 오른쪽 버튼 */
+.cta-btn_cr {
+  flex-shrink: 0;
+}
+
+.cta-button_cr {
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 50px;
+
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.cta-button_cr:hover {
+  background: #47b2e4;
+  border-color: #47b2e4;
+  color: #fff;
+}
+
 /* ================= 반응형 ================= */
 @media (max-width: 1024px) {
   .service-cards_cr {
@@ -203,5 +284,17 @@
 
   .service-cards_cr {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ================= CTA 반응형 ================= */
+@media (max-width: 768px) {
+  .cta-container_cr {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-btn_cr {
+    margin-top: 30px;
   }
 }
