@@ -100,3 +100,12 @@
         width: calc((100% / 2) * 16);
     }
 }
+
+/* =========================================
+   [클라이언트 섹션 애니메이션 적용]
+   ========================================= */
+.clients-section_ny {
+    opacity: 0;
+    animation: zoomIn_ny 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
