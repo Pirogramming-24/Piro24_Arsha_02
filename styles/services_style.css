@@ -109,19 +109,23 @@
 
 .process-card_cr {
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  transition: transform 0.3s;
+  padding: 40px 35px;
+  border-radius: 16px;
+  min-height: 520px;
+
+  box-shadow: 0 10px 30px rgba(55, 81, 126, 0.08);
+  transition: all 0.35s ease;
 }
 
 .process-card_cr:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(71, 178, 228, 0.25);
 }
 
 .img-box_cr {
   overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .img-box_cr img {
@@ -137,23 +141,32 @@
   display: inline-block;
   background: #47b2e4;
   color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+
   text-align: center;
   border-radius: 50%;
-  font-weight: bold;
-  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
 }
 
 .process-card_cr h3 {
+  font-size: 22px;
+  font-weight: 700;
   color: #37517e;
   margin-bottom: 15px;
 }
 
 .process-card_cr p {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 15px;
+  line-height: 1.7;
+  color: #6c757d;
 }
 
 .process-card_cr ul {
@@ -161,13 +174,15 @@
 }
 
 .process-card_cr li {
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #6c757d;
 }
 
 .process-card_cr i {
   color: #47b2e4;
-  margin-right: 8px;
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 /* ================= 반응형 ================= */
