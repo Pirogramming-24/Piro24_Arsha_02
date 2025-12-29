@@ -21,6 +21,13 @@
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 15% 18%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .section-title_cr h2 {
@@ -65,12 +72,83 @@
   color: #666;
 }
 
+
+/*work process부분*/
+.section-title2_cr {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 20% 23%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.section-title2_cr h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: #37517e;
+  position: relative;
+}
+
+.section-title2_cr h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 1px;
+  background: #ddd;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.section-title2_cr h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #47b2e4;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title2_cr p {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+
 /* ================= SERVICES ================= */
 .service-cards_cr {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
+
+/*애니메이션*/
+@keyframes scroll_down_cr {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .service-card_cr {
   background: #fff;
@@ -83,6 +161,13 @@
 
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 17% 18%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  /*animation-fill-mode: forwards;*/
 }
 
 .service-card_cr i {
@@ -129,6 +214,13 @@
 
   box-shadow: 0 10px 30px rgba(55, 81, 126, 0.08);
   transition: all 0.35s ease;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 22% 26%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  /*animation-fill-mode: forwards;*/
 }
 
 .process-card_cr:hover {
@@ -200,6 +292,17 @@
 }
 
 /* ================= CTA (Call To Action) ================= */
+@keyframes text_scale_fade_cr {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 #cta {
   position: relative;
   background-image: url("../images_cr/cta-bg.webp"); /* 배경 이미지 */
@@ -239,6 +342,13 @@
 .cta-text_cr {
   max-width: 800px; /* 🔥 텍스트가 차지하는 영역 증가 */
   color: #fff;
+
+  opacity: 0;
+
+  animation: text_scale_fade_cr linear;
+  animation-timeline: scroll();
+  animation-range: 29% 32%;
+  animation-fill-mode: forwards;
 }
 
 /* 왼쪽 텍스트 */
@@ -273,6 +383,11 @@
   text-decoration: none;
 
   transition: all 0.3s ease;
+
+  animation: text_scale_fade_cr linear;
+  animation-timeline: scroll();
+  animation-range: 29% 32%;
+  /*animation-fill-mode: forwards;*/
 }
 
 .cta-button_cr:hover {
