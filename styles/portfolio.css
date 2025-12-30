@@ -16,15 +16,16 @@ body{
 
 
 .portfolio-section {
+    display: block;   
     align-content: center; justify-content: center;
 }
 .portfolioTitle_hs,
 .portfolio-filters_hs,
 .movingImg_hs {
-    transform: translateY(80px);
+    /* transform: translateY(80px); */
     opacity: 0;
 }
-@keyframes scroll_down {
+@keyframes scroll_down_hs {
     from {
         transform: translateY(80px); opacity: 0;
     }
@@ -35,9 +36,9 @@ body{
 
 .portfolioTitle_hs
 {
-    animation: scroll_down linear;
+    animation: scroll_down_hs linear;
     animation-timeline: scroll();
-    animation-range: 10% 17%; /*병합 후 30% 37% 추정*/
+    animation-range: 33% 37%; /*병합 후 30% 37% 추정*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -45,17 +46,17 @@ body{
 .portfolio-filters_hs{
     margin-top: 0px;
     margin-bottom: 20px;
-    animation: scroll_down linear;
+    animation: scroll_down_hs linear;
     animation-timeline: scroll();
-    animation-range: 13% 20%; /*병합 후 33% 40% 추정*/
+    animation-range: 33% 37%; /*병합 후 33% 40% 추정*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 .movingImg_hs {
-    animation: scroll_down linear;
+    animation: scroll_down_hs linear;
     animation-timeline: scroll();
-    animation-range: 16% 23%; /*병합 후 36% 43% 추정*/
+    animation-range: 36% 40%; /*병합 후 36% 43% 추정*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -64,6 +65,7 @@ body{
 
 .portfolio-section .portfolioTitle_hs{
     justify-content: center; text-align: center; padding: 10px;
+    margin-top: 0;
     
 }
 .portfolio-section .portfolioTitle_hs h2{
@@ -72,13 +74,10 @@ body{
 }
 .portfolio-section .portfolioTitle_hs hr{
     position: relative;
-    background-color: lightgray;
     width: 180px;
     height: 2px;
-    border: 0;
-    overflow: visible;
 
-    
+    overflow: visible;
 
     margin: 0 auto;
     
@@ -103,7 +102,7 @@ body{
     height: 1500px;
     position: relative;
     display: flex;
-    align-content: center;
+    align-content: center; justify-content: center;
     
     padding: 30px;
 }
@@ -114,7 +113,12 @@ body{
     padding: 0 24px;       /* 양쪽 여백 */
     box-sizing: border-box;
 
+    display: flex;
     align-content: flex-start;
+    /* justify-content: center; */
+
+    flex-direction: column;   /* ⭐ 핵심 */
+    align-items: center;      /* 가로 가운데 */
 }
 .portfolioBody_hs input[type="radio"] {
     display: none;
@@ -410,11 +414,44 @@ body{
 
 /*1열*/
 @media (max-width: 767px) {
-    .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper{
-        width: calc(var(--card));
+    
+    /* .portfolio-section{
+        /height: calc(0.66*var(--card)*5 + 1.33*var(--card)*3 + var(--gap)*8); 
+        height: 3000px;
+    } */
+    .portfolio-section{
+        height: auto;   /* ⭐ 위 공백 원인 제거 */
     }
 
-  /* .movingImg_hs {height: 2600px;}   */
+    .portfolioBody_hs {
+        height: 2700px; /* 기본 (ALL) */
+    }
+
+    .portfolioBody_hs:has(#filter-app:checked),
+    .portfolioBody_hs:has(#filter-card:checked),
+    .portfolioBody_hs:has(#filter-web:checked) {
+        height: 1000px;
+    }
+    /* .portfolio-section .portfolioBody_hs{
+        height: calc(0.66*var(--card)*5 + 1.33*var(--card)*3 + var(--gap)*8);
+    } */
+    .portfolio-section .portfolioBody_hs .layout_hs{
+        /* width: calc(var(--card));
+        height: calc(0.66*var(--card)*5 + 1.33*var(--card)*3 + var(--gap)*8); */
+        height: auto;
+        flex-shrink: 0;
+    }
+    .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs{
+        width: calc(var(--card));
+        height: auto;
+    }
+    .portfolio-section .portfolioBody_hs .layout_hs .movingImg_hs .card-wrapper{
+        width: calc(var(--card));
+        height: auto;
+    }
+    
+
+
 
   .movingImg_hs .imgCard { width: 100%;left: 0 !important;}
 
@@ -429,6 +466,22 @@ body{
   #filter-all:checked ~ .movingImg_hs .card-wrapper .card-coloring-pencils {top: calc(1.33*var(--card)*3 + 0.66*var(--card)*4 + var(--gap)*7);}
   #filter-all:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(1.33*var(--card)*3 + 0.66*var(--card)*5 + var(--gap)*8);}
 }
+
+@media (max-width: 767px) {
+
+  #filter-app:checked  ~ .portfolioBody_hs {
+    height: 1000px;
+  }
+
+  #filter-card:checked ~ .portfolioBody_hs {
+    height: 1000px;
+  }
+
+  #filter-web:checked  ~ .portfolioBody_hs {
+    height: 1000px;
+  }
+}
+
 
 @media (max-width: 767px) {
   #filter-app:checked ~ .movingImg_hs .card-wrapper .card-cactus {top: 0px;}
@@ -447,11 +500,7 @@ body{
   #filter-web:checked ~ .movingImg_hs .card-wrapper .card-highlight-pens {top: calc((0.66*var(--card) + var(--gap)));}
   #filter-web:checked ~ .movingImg_hs .card-wrapper .card-glasses-book {top: calc(0.66*var(--card) + 1.33*var(--card) + var(--gap)*2);}
 }
-/*
-app=> 
-card=>ampoule, brush, pencils
-web=>paint, pens, book
-*/
+
 
 
 /* @media (max-width: 1047px) {

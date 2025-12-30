@@ -23,8 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
 </head>
 <body>
 
@@ -68,12 +74,12 @@
             <nav class="navbar_ny">
                 <ul>
                     <li><a href="#home_ny" class="nav-link_ny active_ny">Home</a></li>
-                    <li><a href="#about_ny" class="nav-link_ny">About</a></li>
-                    <li><a href="#services_ny" class="nav-link_ny">Services</a></li>
-                    <li><a href="#portfolio_ny" class="nav-link_ny">Portfolio</a></li>
-                    <li><a href="#team_ny" class="nav-link_ny">Team</a></li>
-                    <li><a href="#pricing_ny" class="nav-link_ny">Pricing</a></li>
-                    <li><a href="#blog_ny" class="nav-link_ny">Blog</a></li>
+                    <li><a href="#about" class="nav-link_ny">About</a></li>
+                    <li><a href="#services" class="nav-link_ny">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link_ny">Portfolio</a></li>
+                    <li><a href="#team" class="nav-link_ny">Team</a></li>
+                    <li><a href="#pricing" class="nav-link_ny">Pricing</a></li>
+                    <li><a href="#blog" class="nav-link_ny">Blog</a></li>
 
                     <li class="dropdown_ny">
                         <a href="#">Dropdown <span class="arrow_ny">▼</span></a>
@@ -95,9 +101,9 @@
                         </ul>
                     </li>
 
-                    <li><a href="#contact_ny" class="nav-link_ny">Contact</a></li>
+                    <li><a href="#contact" class="nav-link_ny">Contact</a></li>
 
-                    <li><a href="#about_ny" class="btn-get-started_ny">Get Started</a></li>
+                    <li><a href="#about" class="btn-get-started_ny">Get Started</a></li>
                 </ul>
             </nav>
             <i class="mobile-nav-toggle_ny d-xl-none_ny bi bi-list"></i>
@@ -308,109 +314,117 @@
     </section>
 
     <section id="services" class="services-section">
-        <div class="section-title_cr">
-            <h2>SERVICES</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
+        <div class="container_cr">
+            <div class="section-title_cr">
+                <h2>SERVICES</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
 
-        <div class="service-cards_cr">
-            <a href="#" class="service-card_cr">
-                <i class="bi bi-activity"></i>
-                <h3>Lorem Ipsum</h3>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </a>
+            <div class="service-cards_cr">
+                <a href="#" class="service-card_cr">
+                    <i class="bi bi-activity"></i>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                </a>
 
-            <a href="#" class="service-card_cr">
-                <i class="bi bi-bounding-box-circles"></i>
-                <h3>Sed ut perspici</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </a>
+                <a href="#" class="service-card_cr">
+                    <i class="bi bi-bounding-box-circles"></i>
+                    <h3>Sed ut perspici</h3>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                </a>
 
-            <a href="#" class="service-card_cr">
-                <i class="bi bi-calendar4-week"></i>
-                <h3>Magni Dolores</h3>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </a>
+                <a href="#" class="service-card_cr">
+                    <i class="bi bi-calendar4-week"></i>
+                    <h3>Magni Dolores</h3>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                </a>
 
-            <a href="#" class="service-card_cr">
-                <i class="bi bi-broadcast"></i>
-                <h3>Nemo Enim</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </a>
+                <a href="#" class="service-card_cr">
+                    <i class="bi bi-broadcast"></i>
+                    <h3>Nemo Enim</h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                </a>
+            </div>
+
         </div>
     </section>
 
 <!-- ================= WORK PROCESS ================= -->
     <section id="workprocess" class="workprocess-section">
-        <div class="section-title_cr">
-            <h2>WORK PROCESS</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
+        <div class="container_cr">
 
-        <div class="process-cards_cr">
-            <div class="process-card_cr">
-                <div class="img-box_cr">
-                    <img src="images_cr/process-1.webp" alt="process1">
-                </div>
-                <span class="step_cr">01</span>
-                <h3>Research & Analysis</h3>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
-                <ul>
-                    <li><i class="bi bi-check-circle"></i> Market Research</li>
-                    <li><i class="bi bi-check-circle"></i> Data Analysis</li>
-                    <li><i class="bi bi-check-circle"></i> User Feedback</li>
-                </ul>
+            <div class="section-title2_cr">
+                <h2>WORK PROCESS</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div>
 
-            <div class="process-card_cr">
-                <div class="img-box_cr">
-                    <img src="images_cr/process-2.webp" alt="process2">
+            <div class="process-cards_cr">
+                <div class="process-card_cr">
+                    <div class="img-box_cr">
+                        <img src="images_cr/process-1.webp" alt="process1">
+                    </div>
+                    <span class="step_cr">01</span>
+                    <h3>Research & Analysis</h3>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Market Research</li>
+                        <li><i class="bi bi-check-circle"></i> Data Analysis</li>
+                        <li><i class="bi bi-check-circle"></i> User Feedback</li>
+                    </ul>
                 </div>
-                <span class="step_cr">02</span>
-                <h3>Design & Planning</h3>
-                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit</p>
-                <ul>
-                    <li><i class="bi bi-check-circle"></i> Wireframing</li>
-                    <li><i class="bi bi-check-circle"></i> UI/UX Design</li>
-                    <li><i class="bi bi-check-circle"></i> Prototyping</li>
-                </ul>
+
+                <div class="process-card_cr">
+                    <div class="img-box_cr">
+                        <img src="images_cr/process-2.webp" alt="process2">
+                    </div>
+                    <span class="step_cr">02</span>
+                    <h3>Design & Planning</h3>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit</p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Wireframing</li>
+                        <li><i class="bi bi-check-circle"></i> UI/UX Design</li>
+                        <li><i class="bi bi-check-circle"></i> Prototyping</li>
+                    </ul>
+                </div>
+
+                <div class="process-card_cr">
+                    <div class="img-box_cr">
+                        <img src="images_cr/process-3.webp" alt="process3">
+                    </div>
+                    <span class="step_cr">03</span>
+                    <h3>Development & Launch</h3>
+                    <p>Et harum quidem rerum facilis est et expedita distinctio</p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Development</li>
+                        <li><i class="bi bi-check-circle"></i> Testing</li>
+                        <li><i class="bi bi-check-circle"></i> Deployment</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="process-card_cr">
-                <div class="img-box_cr">
-                    <img src="images_cr/process-3.webp" alt="process3">
-                </div>
-                <span class="step_cr">03</span>
-                <h3>Development & Launch</h3>
-                <p>Et harum quidem rerum facilis est et expedita distinctio</p>
-                <ul>
-                    <li><i class="bi bi-check-circle"></i> Development</li>
-                    <li><i class="bi bi-check-circle"></i> Testing</li>
-                    <li><i class="bi bi-check-circle"></i> Deployment</li>
-                </ul>
-            </div>
         </div>
     </section>
 
     <section id="cta" class="cta-section">
         <div class="cta-overlay_cr"></div>
 
-        
-        <div class="cta-container_cr">
-            <div class="cta-text_cr">
-                <h3>Call To Action</h3>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+        <div class="container_cr">
+            <div class="cta-container_cr">
+                <div class="cta-text_cr">
+                    <h3>Call To Action</h3>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
 
-            <div class="cta-btn_cr">
-                <a href="#" class="cta-button_cr">Call To Action</a>
+                <div class="cta-btn_cr">
+                    <a href="#" class="cta-button_cr">Call To Action</a>
+                </div>
             </div>
-        </div>
         
+        </div>
     </section>
 
 
@@ -571,93 +585,96 @@
     </section>
 
     <section id="team" class="team-section">
-        <div class="team-header_cr">
-            <h2>TEAM</h2>
-            <p>
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
-            </p>
-        </div>
+        <div class="container_cr">
+            <div class="team-header_cr">
+                <h2>TEAM</h2>
+                <p>
+                    Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+                </p>
+            </div>
 
-        <div class="team-cards_cr">
-            <!-- Card 1 -->
-            <div class="team-card_cr">
-                <div class="team-card-img-wrapper_cr">
-                    <img src="images_cr/team-card-1.webp" alt="member">
+            <div class="team-cards_cr">
+                <!-- Card 1 -->
+                <div class="team-card_cr">
+                    <div class="team-card-img-wrapper_cr">
+                        <img src="images_cr/team-card-1.webp" alt="member">
+                    </div>
+                    <div class="team-info_cr">
+                        <h3>Walter White</h3>
+                        <span>Chief Executive Officer</span>
+                        <div class="info-bar_cr"></div>
+                        <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        
+                        <div class="social_cr">
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-info_cr">
-                    <h3>Walter White</h3>
-                    <span>Chief Executive Officer</span>
-                    <div class="info-bar_cr"></div>
-                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                    
-                    <div class="social_cr">
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                <!-- Card 2 -->
+                <div class="team-card_cr">
+                    <div class="team-card-img-wrapper_cr">
+                        <img src="images_cr/team-card-2.webp" alt="member">
+                    </div>
+                    <div class="team-info_cr">
+                        <h3>Sarah Jhonson</h3>
+                        <span>Product Manager</span>
+                        <div class="info-bar_cr"></div>
+                        <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                        
+                        <div class="social_cr">
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="team-card_cr">
+                    <div class="team-card-img-wrapper_cr">
+                        <img src="images_cr/team-card-3.webp" alt="member">
+                    </div>
+                    <div class="team-info_cr">
+                        <h3>William Anderson</h3>
+                        <span>CTO</span>
+                        <div class="info-bar_cr"></div>
+                        <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                        
+                        <div class="social_cr">
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="team-card_cr">
+                    <div class="team-card-img-wrapper_cr">
+                        <img src="images_cr/team-card-4.webp" alt="member">
+                    </div>
+                    <div class="team-info_cr">
+                        <h3>Amanda Jepson</h3>
+                        <span>Accountant</span>
+                        <div class="info-bar_cr"></div>
+                        <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                        
+                        <div class="social_cr">
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="team-card_cr">
-                <div class="team-card-img-wrapper_cr">
-                    <img src="images_cr/team-card-2.webp" alt="member">
-                </div>
-                <div class="team-info_cr">
-                    <h3>Sarah Jhonson</h3>
-                    <span>Product Manager</span>
-                    <div class="info-bar_cr"></div>
-                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                    
-                    <div class="social_cr">
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="team-card_cr">
-                <div class="team-card-img-wrapper_cr">
-                    <img src="images_cr/team-card-3.webp" alt="member">
-                </div>
-                <div class="team-info_cr">
-                    <h3>William Anderson</h3>
-                    <span>CTO</span>
-                    <div class="info-bar_cr"></div>
-                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                    
-                    <div class="social_cr">
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="team-card_cr">
-                <div class="team-card-img-wrapper_cr">
-                    <img src="images_cr/team-card-4.webp" alt="member">
-                </div>
-                <div class="team-info_cr">
-                    <h3>Amanda Jepson</h3>
-                    <span>Accountant</span>
-                    <div class="info-bar_cr"></div>
-                    <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                    
-                    <div class="social_cr">
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -694,14 +711,14 @@
                                 </li>
                                 <li>
                                     <i class="icon_x_sy"></i>
-                                    <span>Pharetra massa massa ultricies</span>
+                                    <span class= "off_sy">Pharetra massa massa ultricies</span>
                                 </li>
                                 <li>
                                     <i class="icon_x_sy"></i>
-                                    <span>Massa ultricies mi quis hendrerit</span>
+                                    <span class= "off_sy">Massa ultricies mi quis hendrerit</span>
                                 </li>
                             </ul>
-                            <a href="#" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
+                            <a href="#home_ny" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
                         </div>
                         
                     </div>
@@ -736,7 +753,7 @@
                                 </li>
                                 
                             </ul>
-                            <a href="#" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
+                            <a href="#home_ny" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
 
 
 
@@ -774,7 +791,7 @@
                                 </li>
                                 
                             </ul>
-                            <a href="#" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
+                            <a href="#home_ny" class = "buy_btn_sy"><span class="first_letter_sy">B</span>uy <span class = "first_letter_sy">N</span>ow</a>
                         </div>
                         
                     </div>
@@ -948,7 +965,7 @@
 
                 <div class="row_container_sy">
                     <div class="subscribe_row1_sy">
-                        <h2>Subscribe to our <br>newsletter</h2>
+                        <h2>Subscribe to our newsletter</h2>
                         <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit.</p>
                         <div class="all_box_sy">
                             <div class="input_box_sy">
@@ -974,7 +991,7 @@
     </section> <!--pricing 끝나는 부분----------------------------->
 
     <section id="blog" class="blog-section">
-        <div class="blog-container_cr">
+        <div class="container_cr blog-container_cr">
 
             <div class="blog-header_cr">
                 <h2>RECENT BLOG POSTS</h2>
@@ -1213,7 +1230,7 @@
         </div>
     </footer>
 
-    <a href="#" class="back-to-top_ny">↑</a>
+    <a href="#home_ny" class="back-to-top_ny">↑</a>
 
 </body>
 </html>

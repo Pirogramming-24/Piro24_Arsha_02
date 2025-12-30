@@ -1,14 +1,33 @@
+/* ===== SECTION ===== */
+.services-section,
+.workprocess-section {
+  padding: 100px 0;
+}
+
 /* SERVICES 배경 */
 #services {
   background-color: #f5f6f8;
 }
 
+.container_cr {
+  width: 100%;
+  max-width: 1320px;   /* ≥1200 */
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
 /* ================= 공통 ================= */
 .section-title_cr {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 14% 18%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .section-title_cr h2 {
@@ -53,6 +72,64 @@
   color: #666;
 }
 
+
+/*work process부분*/
+.section-title2_cr {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 20% 23%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.section-title2_cr h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: #37517e;
+  position: relative;
+}
+
+.section-title2_cr h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 1px;
+  background: #ddd;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.section-title2_cr h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #47b2e4;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title2_cr p {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+
 /* ================= SERVICES ================= */
 .service-cards_cr {
   display: grid;
@@ -60,9 +137,23 @@
   gap: 30px;
 }
 
+/*애니메이션*/
+@keyframes scroll_down_cr {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .service-card_cr {
   background: #fff;
   padding: 50px 30px;
+  min-height: 300px;
   text-decoration: none;
   color: inherit;
   border-radius: 8px;
@@ -70,6 +161,13 @@
 
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 16% 18%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  /*animation-fill-mode: forwards;*/
 }
 
 .service-card_cr i {
@@ -81,6 +179,7 @@
 .service-card_cr h3 {
   font-size: 20px;
   font-weight: 700;
+  line-height: 28px;
   margin-bottom: 15px;
   color: #37517e;
   transition: color 0.3s;
@@ -88,7 +187,7 @@
 
 .service-card_cr p {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 24px;
 }
 
 .service-card_cr:hover {
@@ -115,6 +214,13 @@
 
   box-shadow: 0 10px 30px rgba(55, 81, 126, 0.08);
   transition: all 0.35s ease;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 22% 26%; /*여기부분만 바꾸기*/
+  animation-iteration-count: 1;
+  /*animation-fill-mode: forwards;*/
 }
 
 .process-card_cr:hover {
@@ -186,6 +292,17 @@
 }
 
 /* ================= CTA (Call To Action) ================= */
+@keyframes text_scale_fade_cr {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 #cta {
   position: relative;
   background-image: url("../images_cr/cta-bg.webp"); /* 배경 이미지 */
@@ -225,6 +342,13 @@
 .cta-text_cr {
   max-width: 800px; /* 🔥 텍스트가 차지하는 영역 증가 */
   color: #fff;
+
+  opacity: 0;
+
+  animation: text_scale_fade_cr linear;
+  animation-timeline: scroll();
+  animation-range: 29% 32%;
+  animation-fill-mode: forwards;
 }
 
 /* 왼쪽 텍스트 */
@@ -232,12 +356,13 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 15px;
+  color: #fff;
 }
 
 .cta-text_cr p {
   font-size: 16px;
   line-height: 1.7;
-  color: #e0e0e0;
+  color: #fff;
   max-width: 900px;
 }
 
@@ -258,6 +383,11 @@
   text-decoration: none;
 
   transition: all 0.3s ease;
+
+  animation: text_scale_fade_cr linear;
+  animation-timeline: scroll();
+  animation-range: 29% 32%;
+  /*animation-fill-mode: forwards;*/
 }
 
 .cta-button_cr:hover {
@@ -268,53 +398,237 @@
 
 /* ================= 반응형 ================= */
 
-/* ---------- 1200px 미만 ---------- */
+/* <1200 */
 @media (max-width: 1199px) {
+  .container_cr {
+    max-width: 1140px;
+  }
+
+  .service-cards_cr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* <992 */
+@media (max-width: 991px) {
+  .container_cr {
+    max-width: 960px;
+  }
+}
+
+/* <768 */
+@media (max-width: 767px) {
+  .container_cr {
+    max-width: 720px;
+  }
+
+  .service-cards_cr {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+/* ================================================= */
+/* ========== STEP TYPE RESPONSIVE OVERRIDE ========= */
+/* ========== (PASTE AT BOTTOM OF CSS) ============== */
+/* ================================================= */
+
+/* ================================================= */
+/* >= 1200px : Desktop A (기본 고정 디자인) */
+/* ================================================= */
+
+.services-section,
+.workprocess-section {
+  padding: 100px 0;
+}
+
+#cta {
+  padding: 140px 0;
+}
+
+/* ---------- SERVICES ---------- */
+.service-card_cr {
+  padding: 50px 30px;
+  min-height: 300px;
+}
+
+.service-card_cr h3 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.service-card_cr p {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.service-card_cr i {
+  font-size: 36px;
+}
+
+/* ---------- WORK PROCESS ---------- */
+.process-card_cr {
+  padding: 40px 35px;
+  min-height: 520px;
+}
+
+.process-card_cr h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.process-card_cr p,
+.process-card_cr li {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/* ---------- CTA ---------- */
+.cta-text_cr h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.cta-text_cr p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* ================================================= */
+/* < 1200px : Desktop B (992 ~ 1199) */
+/* ================================================= */
+
+@media (max-width: 1199px) {
+
+  .container_cr {
+    max-width: 1140px;
+  }
 
   /* SERVICES */
   .service-cards_cr {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* WORK PROCESS (유지) */
-  .process-cards_cr {
-    grid-template-columns: repeat(3, 1fr);
+  .service-card_cr {
+    padding: 44px 28px;
+    min-height: 280px;
   }
 
-  section {
-    padding: 90px 6%;
+  .service-card_cr h3 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+
+  .service-card_cr p {
+    font-size: 14.5px;
+    line-height: 22px;
+  }
+
+  .service-card_cr i {
+    font-size: 34px;
+  }
+
+  /* WORK PROCESS */
+  .process-card_cr {
+    padding: 38px 32px;
+    min-height: 500px;
+  }
+
+  .process-card_cr h3 {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  /* CTA */
+
+  /* CTA: 1200 미만부터 세로 정렬 */
+  .cta-container_cr {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-text_cr {
+    max-width: 100%;
+  }
+
+  .cta-text_cr h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .cta-text_cr p {
+    font-size: 15.5px;
+    line-height: 26px;
+  }
+
+  .cta-botton_cr {
+    margin-top: 30px;
   }
 }
 
+/* ================================================= */
+/* < 992px : Tablet (768 ~ 991) */
+/* ================================================= */
 
-/* ---------- 992px 미만 ---------- */
 @media (max-width: 991px) {
 
-  /* SERVICES */
-  .service-card_cr {
-    padding: 30px 24px;
+  .container_cr {
+    max-width: 960px;
   }
 
-  /* WORK PROCESS → 세로 */
+  /* WORK PROCESS → 세로 스택 */
   .process-cards_cr {
     grid-template-columns: 1fr;
   }
 
   .process-card_cr {
-    max-width: 600px;
+    max-width: 720px;
     margin: 0 auto;
+    padding: 36px 30px;
+    min-height: auto;
+  }
+
+  .process-card_cr h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .process-card_cr p,
+  .process-card_cr li {
+    font-size: 14.5px;
+    line-height: 24px;
+  }
+
+  /* CTA */
+  .cta-container_cr {
+    gap: 30px;
+  }
+
+  .cta-text_cr h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .cta-text_cr p {
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 
+/* ================================================= */
+/* < 768px : Mobile 구조 변경 시작 */
+/* ================================================= */
 
-/* ---------- 768px 미만 ---------- */
 @media (max-width: 767px) {
 
-  section {
-    padding: 70px 5%;
+  .container_cr {
+    max-width: 720px;
   }
 
-  /* SERVICES → 1열 */
+  /* SERVICES */
   .service-cards_cr {
     grid-template-columns: 1fr;
   }
@@ -324,36 +638,98 @@
     flex-direction: column;
     text-align: center;
   }
-
-  .cta-btn_cr {
-    margin-top: 30px;
-  }
 }
 
 
-/* ---------- 576px 미만 ---------- */
+
+
+/* ================================================= */
+/* ========== < 576px : FLUID RESPONSIVE ============ */
+/* ================================================= */
+
 @media (max-width: 575px) {
 
-  section {
-    padding: 60px 5%;
+  /* ---------- CONTAINER ---------- */
+  .container_cr {
+    max-width: 100%;
+    padding: 0 16px;
   }
 
-  /* SERVICES */
+  /* ---------- SECTION ---------- */
+  .services-section,
+  .workprocess-section {
+    padding: 70px 0;
+  }
+
+  #cta {
+    padding: 100px 0;
+    background-attachment: scroll; /* 모바일 패럴랙스 제거 */
+  }
+
+  /* ---------- SERVICES ---------- */
   .service-card_cr {
-    padding: 24px 20px;
+    padding: 36px 24px;
+    min-height: auto;
   }
 
-  /* WORK PROCESS */
+  .service-card_cr i {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .service-card_cr h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .service-card_cr p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* ---------- WORK PROCESS ---------- */
   .process-card_cr {
-    padding: 32px 20px;
+    padding: 32px 24px;
+    min-height: auto;
   }
 
-  /* CTA */
-  .cta-title_cr {
-    font-size: 1.5rem;
+  .process-card_cr h3 {
+    font-size: 19px;
+    line-height: 26px;
   }
 
-  .cta-desc_cr {
-    font-size: 0.95rem;
+  .process-card_cr p,
+  .process-card_cr li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .step_cr {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-container_cr {
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .cta-text_cr h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .cta-text_cr p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .cta-button_cr {
+    padding: 10px 30px;
+    font-size: 14px;
   }
 }
