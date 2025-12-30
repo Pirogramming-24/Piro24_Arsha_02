@@ -1,4 +1,17 @@
 /* ================= BLOG ================= */
+/*애니메이션*/
+@keyframes scroll_down_cr {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 #blog {
   background-color: #f5f6f8;
   padding: 80px 0;
@@ -14,6 +27,12 @@
 .blog-header_cr {
   text-align: center;
   margin-bottom: 60px;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 79% 83%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
+  animation-fill-mode: forwards;
 }
 
 .blog-header_cr h2 {
@@ -59,6 +78,11 @@
   color: inherit;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 80% 85%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
 }
 
 /* ---------- image ---------- */
@@ -158,5 +182,139 @@
 @media (max-width: 576px) {
   .blog-cards_cr {
     grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ================================================= */
+/* ========== BLOG STEP TYPE RESPONSIVE OVERRIDE ==== */
+/* ========== (PASTE AT BOTTOM OF CSS) ============== */
+/* ================================================= */
+
+/* ================================================= */
+/* >= 1200px : Desktop A */
+/* ================================================= */
+
+#blog {
+  padding: 100px 0;
+}
+
+.blog-header_cr {
+  margin-bottom: 60px;
+}
+
+.blog-header_cr h2 {
+  font-size: 32px;
+}
+
+.blog-header_cr p {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* cards layout */
+.blog-cards_cr {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blog-content_cr {
+  padding: 30px;
+}
+
+.blog-content_cr h3 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/* ================================================= */
+/* < 1200px : Desktop B (2x2 느낌) */
+/* ================================================= */
+
+@media (max-width: 1199px) {
+
+  /* 3개지만 2x2처럼 보이게 */
+  .blog-cards_cr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-content_cr h3 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+
+/* ================================================= */
+/* < 992px : Tablet (정렬 유지) */
+/* ================================================= */
+
+@media (max-width: 991px) {
+
+  /* 구조 유지 */
+  .blog-cards_cr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .blog-content_cr {
+    padding: 28px;
+  }
+
+  .blog-content_cr h3 {
+    font-size: 18.5px;
+  }
+}
+
+/* ================================================= */
+/* < 768px : Mobile STEP (1열 3개) */
+/* ================================================= */
+
+@media (max-width: 767px) {
+
+  .blog-cards_cr {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card_cr:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .blog-content_cr {
+    padding: 26px;
+  }
+
+  .blog-content_cr h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+/* ================================================= */
+/* < 576px : FLUID RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 575px) {
+
+  #blog {
+    padding: 70px 0;
+  }
+
+  .blog-content_cr {
+    padding: 22px 20px;
+  }
+
+  .blog-content_cr h3 {
+    font-size: 16.5px;
+    line-height: 24px;
+  }
+
+  .blog-header_cr h2 {
+    font-size: 26px;
+  }
+
+  .blog-header_cr p {
+    font-size: 14px;
+    line-height: 22px;
   }
 }

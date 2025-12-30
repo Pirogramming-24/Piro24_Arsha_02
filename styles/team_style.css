@@ -1,4 +1,16 @@
 /* ===== TEAM SECTION ===== */
+/*애니메이션*/
+@keyframes scroll_down_cr {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #team {
   padding: 60px 0;
   background-color: #ffffff;
@@ -8,6 +20,12 @@
   padding: 0 12px 60px;
   margin: 0 40px;
   text-align: center;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 47% 51%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
+  animation-fill-mode: forwards;
 }
 
 .team-header_cr h2 {
@@ -76,6 +94,11 @@
   gap: 20px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /*애니메이션*/
+  animation: scroll_down_cr linear;
+  animation-timeline: scroll();
+  animation-range: 49% 52%; /*여기부분만 바꾸기 내 컴터는 간격 3*/
 }
 
 /*hover기능!!!!!*/
@@ -178,5 +201,189 @@
   .team-card {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+
+
+
+
+/* ================================================= */
+/* ========== TEAM STEP TYPE RESPONSIVE OVERRIDE ==== */
+/* ========== (PASTE AT BOTTOM OF CSS) ============== */
+/* ================================================= */
+
+/* ================================================= */
+/* >= 1200px : Desktop A */
+/* ================================================= */
+
+#team {
+  padding: 100px 0;
+}
+
+.team-header_cr {
+  margin: 0 auto 60px;
+  padding: 0;
+}
+
+.team-header_cr h2 {
+  font-size: 32px;
+}
+
+.team-header_cr p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* cards layout */
+.team-cards_cr {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* card */
+.team-card_cr {
+  padding: 30px;
+  gap: 20px;
+}
+
+.team-card-img-wrapper_cr {
+  width: 150px;
+  height: 150px;
+}
+
+.team-info_cr h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.team-info_cr span {
+  font-size: 14px;
+}
+
+.team-info_cr p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* ================================================= */
+/* < 1200px : Desktop B (992 ~ 1199) */
+/* ================================================= */
+
+@media (max-width: 1199px) {
+
+  .team-header_cr h2 {
+    font-size: 30px;
+  }
+
+  .team-header_cr p {
+    font-size: 15.5px;
+  }
+
+  .team-card_cr {
+    padding: 28px;
+  }
+
+  .team-card-img-wrapper_cr {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-info_cr h3 {
+    font-size: 19px;
+  }
+}
+
+/* ================================================= */
+/* < 992px : Tablet (세로 4개 나열) */
+/* ================================================= */
+
+@media (max-width: 991px) {
+
+  /* 카드 → 1열 */
+  .team-cards_cr {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card_cr {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 26px;
+  }
+
+  .team-card-img-wrapper_cr {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-info_cr h3 {
+    font-size: 18px;
+  }
+
+  .team-info_cr p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* ================================================= */
+/* < 768px : Mobile STEP (구조 유지) */
+/* ================================================= */
+
+
+
+/* ================================================= */
+/* < 576px : FLUID RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 575px) {
+
+  #team {
+    padding: 70px 0;
+  }
+
+  .team-header_cr h2 {
+    font-size: 26px;
+  }
+
+  .team-header_cr p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .team-card_cr {
+    padding: 24px 20px;
+  }
+
+  .team-card-img-wrapper_cr {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-info_cr h3 {
+    font-size: 17px;
+  }
+
+  .team-info_cr p {
+    font-size: 13.5px;
+    line-height: 21px;
+  }
+}
+
+/*468이하*/
+@media (max-width: 468px) {
+
+  .team-card_cr {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-info_cr span::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social_cr {
+    justify-content: center;
   }
 }
